@@ -2,39 +2,109 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Free Web tutorials">
-    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
-    <meta name="author" content="John Doe">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Hello World!</title>
+    <title>Hello World</title>
 </head>
 <body>
-    <a id="top"></a>
-    <a href="#bottom"><button id="top-button">Go to the bottom of the page</button></a>
 
-    <h1>Hello Everyone!</h1>
-    <h2>Welcome to Codeup!</h2>
-    <h3>how to add/commit your work to Github</h3>
+<h1>Hello World</h1>
+<h2>Welcome to CodeUp</h2>
 
-    <a href="http://codeup.com" target="_blank">Codeup</a>
+<div id="github">
+    <h2>How to add/Commit files to GitHub</h2>
+    <ol>
+        <li>Create a new file or edit an existing one</li>
+        <li>In IntilliJ: Make a commit w/ Command+K</li>
+        <li>Add commit notes with the next commit.</li>
+        <li>Select Commit and Push to save and upload the file.</li>
+    </ol>
 
-    <hr>
-
-    <a href="http://www.codeup.com" target="_blank"><img src="images/codeup.png" alt="image" id="codeup"></a>
-
+</div>
+<div id="anchors">
+    <h2>Anchors</h2>
     <ul>
-        <li>Create a new file and edit an existing file</li>
-        <li>In IntelliJ, make a commit w/ Command+k</li>
-        <li>Any time you add new work make a commit</li>
-        <li>add a 'commit message' that explains what you are doing/creating</li>
-        <li>hover over the commit button and press 'commit and push'</li>
-        <li>push the next line to git</li>
+        <li>Local Navigation</li>
+        <li>External Navigation</li>
     </ul>
+    <h3>Images can also be links to new pages.</h3>
+    <a id="google_logo" href="https://www.google.com" target="_blank"><img src="images/google_img.png" alt="Google" height="10%" width="10%"></a>
+</div>
 
-    <!--everything in this is commented out-->
-
-    <a href="#top"><button id="bottom-button">Go to the top of the page</button></a>
-    <a id="bottom"></a>
+<div id="meta">
+    <h2>Meta Tags</h2>
+    <ul>
+        <li>Contained in the header</li>
+        <li>The client's browser sees this content, not the user</li>
+        <li>Usefull for telling the browser keywords for SEO, charset, description, author and default size</li>
+    </ul>
+</div>
+<div id="inline">
+    <h2>Inline Elements</h2>
+    <p>Used primarily as a way select single or grouped elements that do not take up the width of the page. Can be forced into block elements with CSS.</p>
+    <ul>
+        <li>Spans</li>
+        <li>Anchors</li>
+        <li>Strong</li>
+        <li>Emphasis</li>
+        <li>Bold</li>
+        <li>Italic</li>
+    </ul>
+</div>
+<div id="block">
+    <h2>Block Elements</h2>
+    <p>Selects elements and takes up the full width of the page.</p>
+    <ul>
+        <li>Headers</li>
+        <li>Lists</li>
+        <li>Div's</li>
+    </ul>
+</div>
+<div id="void">
+    <h2>Void Elements</h2>
+    <ul>
+        <li>Line Break</li>
+        <li>Horizontal Rule</li>
+    </ul>
+</div>
+<div id="table">
+    <h2>Tables</h2>
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Calories</th>
+        </tr>
+        <tr>
+            <td>Bread</td>
+            <td>1000kcal</td>
+        </tr>
+        <tr>
+            <td>Cookie</td>
+            <td>250,000kcal</td>
+        </tr>
+        <tr>
+            <td>Beer</td>
+            <td>150kcal</td>
+        </tr>
+    </table>
+</div>
+<div id="form">
+    <h2>Forms</h2>
+    <p>Post, get are just a few of the form functions. Useful for receiving informatino from the user.</p>
+    <form action="">
+        <label for="username">Username</label>
+        <input id="username" type=text">
+        <lable for="password">Password</lable>
+        <input type="password" id="password">
+        <button type="submit">Login</button>
+    </form>
+</div>
+<div>
+    <parent>
+        <child>
+            <grandparent>
+                
+            </grandparent>
+        </child>
+    </parent>
+</div>
 </body>
 </html>
