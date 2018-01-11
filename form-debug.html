@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Form Debug</title>
 </head>
 <body>
 <h1>Please Sign Up</h1>
@@ -40,26 +40,26 @@
 
     <h2>This past year I was (check all that apply)</h2>
 
-    <label for="self">
+    <label>
         <input type="checkbox" id="self" name="employment_status" value="self_employed">
         Self - Employed
     </label>
     <br>
 
-    <label for="small_business">
+    <label>
         <input type="checkbox" name="employment_status" id="small_business" value="small_business">
         Employed by a small business (< 50 employees)
     </label>
     <br>
 
-    <label for="large_business">
+    <label>
         <input type="checkbox" name="employment_status" id="large_business" value="large_business">
         Employed by a large business (> 50 employees)
     </label>
     <br>
 
     <h2>What kind of phone do you have</h2>
-    <select name="phone type">
+    <select name="phone type" multiple>
         <option value="android">Android</option>
         <option value="iphone">iPhone</option>
         <option value="windows">Windows Phone</option>
@@ -71,6 +71,24 @@
     <label for="newsletter">Sign Me Up For The Newsletter
         <input type="checkbox" name="newsletter" id="newsletter" value="yes" checked>
     </label>
+
+    <br>
+
+    <h2>What kind of phone do you own?</h2>
+    <label for="android">
+        <input id="android" type="checkbox" name="phones" value="android">Android
+    </label>
+    <label for="ios">
+        <input id="ios" type="checkbox" name="phones" value="ios">iOS
+    </label>
+    <label for="windows">
+        <input id="windows" type="checkbox" name="phones" value="windows">Windows
+    </label>
+    <label for="other">
+        <input id="other" type="checkbox" name="phones" value="other">Other
+    </label>
+
+    <br>
 
     <button type="submit">Login</button>
 
