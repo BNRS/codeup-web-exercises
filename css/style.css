@@ -1,0 +1,19 @@
+header {
+    color: #6158c3;
+    text-decoration: underline;
+}
+
+.main_header {
+    text-align: center;
+}
+
+.p_header {
+    color: #5d96b7;
+}
+
+body {
+    background-color: #cccccc;
+    background-image: url("../images/background_red.png");
+    font-family: Shrikhand;
+}
+
