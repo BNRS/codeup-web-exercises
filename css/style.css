@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 header {
     color: #6158c3;
     text-decoration: underline;
