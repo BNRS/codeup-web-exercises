@@ -5,26 +5,27 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/lease-app.css">
+    <link href='https://fonts.googleapis.com/css?family=Shrikhand' rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
 
-    <h1>Residential Lease Application</h1>
-    <h3>Texas Association of Realtors</h3>
+    <h1 class="h1-header">Residential Lease Application</h1>
+    <h3 class="h3-header">Texas Association of Realtors</h3>
 
-        <form method="POST" action="https://hookb.in/vQQra7MA">
+        <form method="POST" action="https://hookb.in/vP8b9dOy">
 
-            <hr>
             <br>
 
-            <fieldset>
-            <div id="property_address">
+            <fieldset class="fieldset-top">
+            <div class="property-address">
                 <label for="property_address">Property Address:</label>
-                <input id="property_address" type="text" name="property_address" size="173" placeholder="Address, City, State, Zip">
+                <input id="property_address" type="text" name="property_address" size="183" placeholder="Address, City, State, Zip">
             </div>
             <br>
 
-            <div id="top-line">
+            <div class="top-line">
                 <label for="move-in-date">Anticipated: Move In Date:</label>
                 <input id="move-in-date" type="text" name="move-in-date" size="40" placeholder="enter anticipated move in date here">
 
@@ -88,7 +89,7 @@
                     </label>
 
                     <label>
-                        <input type="checkbox" name="co-app-no">No
+                        <input type="checkbox" name="co-app-no">No   -
                     </label>
 
                     <label><strong>If yes the co-applicant must submit a seperate application</strong></label>
@@ -132,7 +133,7 @@
                     <input id="DL" type="text" name="drivers-license-number" size="47" placeholder="Enter DL number here">
 
                     <label for="state-select">State of Residence</label>
-                    <select id="state-select" name="state-of-res">
+                    <select class="dropdown" id="state-select" name="state-of-res">
                         <option value="AL">Alabama</option>
                         <option value="AK">Alaska</option>
                         <option value="AZ">Arizona</option>
@@ -203,7 +204,7 @@
                     </label>
 
                     <label for="eye-color-selector">Select Your Eye Color</label>
-                    <select id="eye-color-selector" name="eye-color">
+                    <select class="dropdown" id="eye-color-selector" name="eye-color">
                         <option>Black</option>
                         <option>Blue</option>
                         <option>Brown</option>
@@ -221,7 +222,7 @@
                     </div>
 
                     <label for="hair-color-selector">Select Your Hair Color</label>
-                    <select id="hair-color-selector" name="hair-color">
+                    <select class="dropdown" id="hair-color-selector" name="hair-color">
                         <option>Brown</option>
                         <option>Black</option>
                         <option>White</option>
@@ -239,13 +240,13 @@
                     </select>
 
                     <label for="marital-status-selector">Marital Status</label>
-                    <select id="marital-status-selector" name="marital-status">
+                    <select class="dropdown" id="marital-status-selector" name="marital-status">
                         <option>Single</option>
                         <option>Married</option>
                     </select>
 
                     <label for="country-selector">Citizenship Status</label>
-                    <select id="country-selector" name="country-selector">
+                    <select class="dropdown" id="country-selector" name="country-selector">
                         <option value="AF">Afghanistan</option>
                         <option value="AX">Åland Islands</option>
                         <option value="AL">Albania</option>
@@ -503,7 +504,8 @@
                 <br>
             </div>
 
-            <button type="submit">Submit Form!</button>
+            <button class="button" type="submit">Submit Form!</button>
+            <button class="button" type="reset">Reset Form!</button>
 
             <div>
                 <br>
