@@ -1,0 +1,45 @@
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Pacifico', cursive;
+}
+
+.top-page {
+    height: 85%;
+    width: 100%;
+    background-color: #cf4546;
+    position: fixed;
+    text-align: center;
+    color: white;
+}
+
+hr {
+    width: 10%;
+}
+
+.gg {
+    font-size: 100px;
+    position: relative;
+}
+
+.login-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.23);
+    padding: 3px 8px;
+    border-radius: 2px;
+    font-family: 'Pacifico', cursive;
+    font-size: large;
+}
+
+/*position: absolute;*/
+/*top: 20px;*/
+/*right: 20px;*/
+/*background: rgba(255, 255, 255, 0.23);*/
+/*padding: 3px 8px;*/
+/*border-radius: 2px;*/
