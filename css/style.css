@@ -20,7 +20,7 @@ body {
     background-image: url("../images/city.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size:cover;
+    background-size: cover;
     background-attachment: fixed;
     font-family: 'Acme', sans-serif;
 }

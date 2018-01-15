@@ -18,7 +18,11 @@ body{
 }
 
 hr {
-    width: 10%;
+    background-color: white;
+    position: relative;
+    bottom: 25px;
+    height: 4px;
+    width: 5%;
 }
 
 .gg {
@@ -35,6 +39,19 @@ hr {
     border-radius: 2px;
     font-family: 'Pacifico', cursive;
     font-size: large;
+    text-decoration: underline;
+}
+
+.purchase-button {
+    border: 1px solid white;
+    padding: 15px 30px;
+    border-radius: 300px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Open Sans';
+    margin-bottom: 0;
+    line-height: 1.5;
+    background: transparent;
 }
 
 /*position: absolute;*/
