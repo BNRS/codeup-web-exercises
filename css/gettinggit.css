@@ -14,9 +14,7 @@ a {
 .top-page {
     height: 580px;
     width: 100%;
-    margin: 0px auto;
-    border: 5px solid #166489;
-    padding: 0px;
+    border-top: 5px solid #166489;
     background-color: #cf4546;
     position: relative;
     text-align: center;
@@ -34,7 +32,7 @@ a {
     opacity: .7;
 }
 
-hr {
+.hr-top {
     border: none;
     background-color: white;
     position: relative;
@@ -95,6 +93,49 @@ hr {
 }
 
 .course-intro:hover {
+    opacity: .7;
+    -webkit-transition: all .35s;
+}
+
+.middle-page {
+    position: relative;
+    text-align: center;
+}
+
+.course-introduction {
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.1;
+    font-weight: 100;
+    font-size: 30px;
+    margin: 60px 0 20px 0;
+}
+
+.hr-middle {
+    border: none;
+    background-color: #5796cf;
+    position: relative;
+    height: 2px;
+    width: 4%;
+    margin: 0 auto 20px;
+}
+
+.text-under-video {
+    margin-top: 15px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 100%;
+    -webkit-font-smoothing: auto;
+    line-height: 1.5;
+    opacity: .7;
+}
+
+.intro-videos {
+    text-decoration: none;
+    color: red;
+}
+
+.intro-videos:hover {
+    text-decoration: underline red;
     opacity: .7;
     -webkit-transition: all .35s;
 }
