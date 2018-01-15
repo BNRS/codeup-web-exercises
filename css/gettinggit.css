@@ -24,10 +24,10 @@ a {
 }
 
 .getting-git {
-    font-family: Pacifico;
+    font-family: Pacifico, sans-serif;
     font-size: 100px;
     position: relative;
-    margin: 50px 0px 50px 0px;
+    margin: 50px 0 50px 0;
 }
 
 .transparent-text {
@@ -40,8 +40,7 @@ hr {
     position: relative;
     height: 2px;
     width: 4%;
-    margin: 0px auto;
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
 }
 
 .first-line {
