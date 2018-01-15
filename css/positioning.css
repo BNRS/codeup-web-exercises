@@ -15,9 +15,9 @@
        <img style=position="absolute">
    </div>
 
-    When the parent container is has relative positioning,
-    the top/right/left/bottom properties for the absolutely
-    positioned img work "relative" to the div container.
+    When the parent container has relative positioning,
+    the top/right//bottom/left properties for the absolutely
+    positioned img work in relation to the parent div container.
  */
 
 .box>img {
