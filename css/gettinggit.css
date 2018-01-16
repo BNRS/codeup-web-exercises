@@ -127,17 +127,17 @@ middle portion of page START*/
     margin-top: 15px;
     font-family: 'Nunito', sans-serif;
     font-size: 100%;
-    -webkit-font-smoothing: auto;
+    -webkit-font-smoothing: antialiased;
     line-height: 1.5;
     opacity: .7;
 }
 
-.intro-videos {
+.red-link {
     text-decoration: none;
     color: red;
 }
 
-.intro-videos:hover {
+.red-link:hover {
     text-decoration: underline red;
     opacity: .7;
     -webkit-transition: all .35s;
@@ -171,5 +171,117 @@ bottom middle portion of page START*/
 
 .bottom-p {
     margin: 0 auto;
+    margin-bottom: 45px;
     width: 50%;
+}
+/* bottom middle portion of page END
+--------------------------------------------------
+--------------------------------------------------
+near bottom page START*/
+.near-bottom-page {
+    font-family: 'Nunito', sans-serif;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.paragraph-boxes {
+    line-height: 1.7;
+    font-size: 16px;
+    height: 200px;
+    width: 250px;
+    text-align: left;
+    margin: 0 30px 30px 0;
+    position: relative;
+    left: 327px;
+    float: left;
+}
+
+.code-block {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px
+}
+
+.bottom-page h1 {
+    font-size: 25px;
+    align-content: center;
+}
+
+.paragraph-boxes:nth-child(4) {
+    clear: left;
+}
+/* near bottom page END
+--------------------------------------------------
+--------------------------------------------------
+near bottom 2 START*/
+.near-bottom-2 {
+    font-family: Nunito, sans-serif;
+    position: relative;
+    top: 70px;
+    height: 330px;
+    width: 100%;
+    border-top: 5px solid #166489;
+    background-color: #cf4546;
+    text-align: center;
+    color: white;
+    clear: both;
+}
+
+.get-started {
+    font-size: 30px;
+    position: relative;
+    margin: 45px 0 20px 0;
+}
+
+.hr-near-bottom-2 {
+    border: none;
+    background-color: white;
+    position: relative;
+    height: 2px;
+    width: 4%;
+    margin: 0 auto 20px;
+}
+
+.near-bottom-2-p-1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.bottom-purchase {
+    margin-bottom: 20px;
+}
+/* near bottom page END
+--------------------------------------------------
+--------------------------------------------------
+bottom page START*/
+.bottom-page {
+    font-family: Nunito, sans-serif;
+    position: relative;
+    top: 100px;
+    height: 230px;
+    width: 100%;
+    text-align: center;
+    color: black;
+}
+
+.h1-bottom {
+    font-size: 30px;
+    position: relative;
+    margin: 45px 0 20px 0;
+}
+
+.hr-bottom {
+    border: none;
+    background-color: #cf4546;
+    position: relative;
+    height: 2px;
+    width: 4%;
+    margin: 0 auto 20px;
+}
+
+.bottom-p-2 {
+    font-size: 20px;
+    margin-bottom: 20px;
 }
