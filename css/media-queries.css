@@ -1,53 +1,54 @@
-/* MOBILE FIRST default layout */
-
-body {
+* {
     box-sizing: border-box;
-    padding: 0 auto;
-}
-.alert-info {
-    border: 1px solid black;
-    height: 50px;
-    text-align: center;
-    padding: 30px 0 0 0;
-    background-color: #3ca8de;
-    color: black;
 }
 
-.alert-info a {
-    color: black;
+.main-container {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1200px;
 }
 
-h1 {
-    font-size: 50px;
-    text-align: center;
+.hidden-on-desktop {
+    display: none;
 }
 
-ul {
-    padding: 0px;
+.alert-info > a {
+    color: #000;
+    text-decoration: none;
 }
 
-li {
-    list-style: none;
-    text-align: center;
-    height: 50px;
-    border: none;
-    background-color: grey;
-    padding-top: 30px;
-    margin: 10px;
+.nav-links {
+    text-align: right;
+    float: right;
 }
 
-img {
-    height: 224px;
-    width: 339px;
+.nav-links li {
+    background-color: transparent;
+    display: inline-block;
+    padding: .2em;
+    line-height: 4em;
 }
 
-.header-img {
-    text-align: center;
+.header-img img {
+    width: 100%;
 }
 
 .sub-section {
     font-style: italic;
-    font-weight: bold;
+}
+
+footer > p {
+    float: left;
+}
+
+#social-media-links {
+    float: right;
+}
+
+#social-media-links li {
+    list-style: none;
+    float: left;
+    letter-spacing: 1em;
 }
 
 .fa {
@@ -83,105 +84,239 @@ img {
     opacity: 0.5;
 }
 
-@media screen and (min-width:890px) {
+.row {
+    margin-top: 5%;
+    width: 100%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+}
+
+.column.half-column {
+    width: 50%;
+}
+
+.column.full-column {
+    width: 100%;
+}
+
+.column.column66 {
+    width: 66%;
+}
+
+.column.column33 {
+    width: 33%;
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
 
     body {
-        box-sizing: border-box;
-        padding: 0 auto;
-        margin: 0 auto;
+        padding: 15px;
     }
-    
+
+    .alert-info {
+        display: block;
+        background-color: #add8e6;
+        border: 2px solid #984747;
+        padding: 1em;
+        text-align: center;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    ul{
+        padding-left:0;
+    }
+
+    .nav-links {
+        clear: both;
+        text-align: center;
+        float: none;
+    }
+
+    .nav-links li {
+        padding: 0;
+        margin: 10px;
+        clear: both;
+        background-color: grey;
+        border: 2px solid #984747;
+        display: block;
+        line-height: 4em;
+        list-style:none;
+    }
+
+    .column.mobile-full-column {
+        width: 100%;
+    }
+
+    footer > p {
+        float: none;
+        text-align: center;
+    }
+
+    #social-media-links {
+        float: none;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+/*========================original CSS content====================*/
+/*html,
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    padding: 15px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.alert-info {
+    background-color: #add8e6;
+    border: 2px solid #d3d3d3;
+    padding: 1em;
+    text-align: center;
+}
+
+.alert-info > a {
+    color: #000;
+    text-decoration: none;
+}
+
+.nav-links {
+    padding-left: 0;
+}
+
+.nav-links li {
+    background-color: #d3d3d3;
+    padding: 1em;
+    text-align: center;
+    margin-bottom: .5em;
+    list-style-type: none;
+}
+
+.header-img img {
+    width: 100%;
+}
+
+.sub-section {
+    font-style: italic;
+}
+
+footer > p {
+    float: left;
+}
+
+#social-media-links {
+    float: right;
+}
+
+#social-media-links li {
+    list-style: none;
+    float: left;
+    letter-spacing: 1em;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+
+.fa:hover {
+    opacity: 0.5;
+}
+*/
+
+/* Applies when the screen is wider than 768px */
+/* Put CSS that applies to non-mobile sized screen here */
+/*@media screen and (min-width: 768px) {
     .hidden-on-desktop {
         display: none;
     }
 
     h1 {
-        margin: 0;
-        font-size: 50px;
         text-align: left;
-        position: absolute;
-        top: 0;
-        left: 0;
+        padding: .2em;
         float: left;
+        margin-bottom: 1em;
     }
 
-    li {
-        list-style: none;
-        text-align: center;
-        height: 50px;
-        width: 50px;
-        border: 1px solid red;
-        background-color: grey;
-        padding: 30px 30px 0px 30px;
-        margin: 10px;
+    .nav-links {
+        text-align: right;
         float: right;
     }
-
-    img {
-        height: 385px;
-        width: 890px;
-        margin: 100px;
+    .nav-links li {
+        background-color: transparent;
+        display: inline-block;
+        padding: .2em;
+        line-height: 4em;
     }
 
-    .header-img {
-        clear: both;
+    section {
+        float: left;
     }
 
     .main {
-        height: 200px;
-        width: 65%;
-        float: left;
+        width: 66%;
     }
 
     .sub-section {
-        height: 200px;
-        width: 25%;
-        font-style: italic;
-        font-weight: bold;
-        float: right;
+        width: 33%;
     }
 
-    footer p {
-        float: left;
-        margin: 0;
-        padding-top: 40px;
-    }
+}*/
 
-    #social-media-links {
-        float: right;
-    }
-    
-    .fa {
-        padding: 20px;
-        font-size: 30px;
-        width: 50px;
-        text-align: center;
-        text-decoration: none;
-        margin: 5px 2px;
-    }
-
-    .fa-facebook {
-        background: #3B5998;
-        color: white;
-    }
-
-    .fa-instagram {
-        background: #125688;
-        color: white;
-    }
-
-    .fa-twitter {
-        background: #55ACEE;
-        color: white;
-    }
-
-    .fa-youtube {
-        background: #bb0000;
-        color: white;
-    }
-
-    .fa:hover {
-        opacity: 0.5;
-    }
-
-}
