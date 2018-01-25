@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inline-JS</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    "use strict";
+
+    alert("Message goes here.");
+
+    // the following line will show the OK/CANCEL confirm dialog
+    var confirmed = confirm('Are you sure you want to do XYZ?');
+    console.log(confirmed); // will be either true or false
+
+    var userInput = prompt('Please type something:');
+    console.log('The user entered: ' + userInput);
+
+    console.log('Hello from inline JavaScript!');
+
+    var questionOne = prompt('what is your favorite number?')
+    console.log('your fav number is' + ' ' + questionOne);
+
+</script>
+
+</body>
+</html>
