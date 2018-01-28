@@ -1,11 +1,31 @@
 "use strict";
 
-console.log('Hello from external JavaScript');
+// console.log('Hello from external JavaScript');
+//
+// alert('Welcome to my webpage!');
+//
+// var userFavColor = prompt('What is your favorite color?');
+// console.log(alert('Great! That\'s a fantastic color! ' + userFavColor + ' is my favorite color also!'));
 
-alert('Welcome to my webpage!');
+(function () {
 
-var userFavColor = prompt('What is your favorite color?');
-console.log(alert('Great! That\'s a fantastic color! ' + userFavColor + ' is my favorite color also!'));
+
+
+function addingOne(x) {
+    return x + 1;
+}
+
+var four =  addingOne(3);
+var six = addingOne(5);
+
+
+
+
+})();
+
+
+
+
 
 
 
