@@ -1,11 +1,5 @@
 "use strict";
-// Make a function named sayHello(name) that returns "Hi " + name.
-// function sayHello(name) {
-//     return "Hi, " + name + "!";
-// }
-// console.log(sayHello("Jane"));
-// console.log(sayHello("Charlie"));
-//
+
 // Write a function named capitalize(string) that takes a string of any capitalization and uppercases the first character
 // and lowercases the rest of the characters of a string.
 // function capitalize(string) {
@@ -81,46 +75,46 @@ function sayHello(name) {
 
 //Write a function named capitalize(string) that takes a string of any capitalization and uppercases the first character and lowercases the rest of the characters of a string.
 
-function capitalize (string) {
+function capitalize(string) {
   return string[0].toUpperCase() + string.slice(1).toLowerCase();
 }
 
 console.log(capitalize('thIS IS MY STRING'));
 
 // Write a function named upperCase(string)
-function upperCase (string) {
+function upperCase(string) {
   return string.toUpperCase();
 }
 
-console.log(upperCase('bacon'));
+console.log(upperCase('uppercase'));
 
 // Make a function named identity(input) that returns the input exactly as provided.
-function identity (input) {
+function identity(input) {
   return input;
 }
 
 //Make a function named isOdd(number)
-function isOdd (number) {
+function isOdd(number) {
   return number % 2 !== 0;
 }
 
 // Make a function named isEven(number)
-function isEven (number) {
+function isEven(number) {
   return number % 2 === 0;
 }
 
 // Make a function named isPositive(number)
-function isPositive (number) {
+function isPositive(number) {
   return number > 0;
 }
 
 // Make a function named isNegative(number)
-function isNegative (number) {
+function isNegative(number) {
   return number < 0;
 }
 
 // Make a function named isBoolean(input)
-function isBoolean (input) {
+function isBoolean(input) {
   return typeOf(input) === 'boolean';
 }
 // Make a function named isTrue(boolean)
