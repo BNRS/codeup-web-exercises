@@ -7,7 +7,7 @@
 // var userFavColor = prompt('What is your favorite color?');
 // console.log(alert('Great! That\'s a fantastic color! ' + userFavColor + ' is my favorite color also!'));
 
-(function () {
+
 
 
 
@@ -21,7 +21,7 @@ var six = addingOne(5);
 
 
 
-})();
+
 
 
 

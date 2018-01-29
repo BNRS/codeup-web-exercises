@@ -10,7 +10,7 @@
  */
 
 function sayHello(name) {
-    return ("hello there, " + name);
+    return "hello there, " + name;
 }
 
 /**
@@ -35,8 +35,15 @@ var myName = 'Benjamin';
 sayHello(myName);
 console.log(sayHello(myName) + "! " + "you are starting to understand!");
 
+
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
+
+function randomNumberUnder(number) {
+    return Math.ceil(Math.random() * number);
+}
+
+
 var random = Math.floor((Math.random() * 3) + 1);
 
 /**
@@ -61,7 +68,7 @@ function isTwo(x) {
     return (x === 2);
 }
 
-// double == in case theres a string of 2
+// double == in case there's a string of 2
 
 isTwo(random);
 console.log(isTwo(random) + ' because the value was ' + (random));
@@ -79,11 +86,17 @@ console.log(isTwo(random) + ' because the value was ' + (random));
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
-function calculateTip(bill, tip) {
-    return bill * tip;
+function calculateTip(bill, tipPercentage) {
+    if(tipPercentage < 1) {
+        return bill * tipPercentage;
+    } else {
+        return (tipPercentage / 100) * bill;
+    }
 }
 
-console.log(calculateTip(100, .15));
+// return bill * tipPercentage;
+
+
 
 /**
  * TODO:
@@ -93,30 +106,37 @@ console.log(calculateTip(100, .15));
  */
 
 
+var bill = parseFloat(prompt('How much was your bill?'));
+var tipPercentage = parseFloat(prompt('please put tip in decimal form on your bill of ' + bill + ' dollars'));
+var totalTip = calculateTip(bill, tipPercentage);
+var finalTotal = totalTip + bill;
+alert("you tipped " + totalTip + " dollars on your bill of " + bill + " for a total bill of " + finalTotal + " dollars");
+console.log("you tipped " + totalTip + " dollars on your bill of " + bill + " for a total bill of " + finalTotal + " dollars");
 
-function handleTip() {
-    var billTotal = prompt('How much was your bill?');
-    var tipAmount = prompt('please put tip in decimal form on your bill of' + ' ' +  (billTotal));
-    console.log(calculateTip(billTotal, tipAmount));
-}
+// var bill = parseFloat(prompt("How much was your lunch?"));
+// var tipPercentage = parseFloat(prompt("Please input a tip percentage as a decimal: example .2 means 20%"));
+// var tipAmount = calculateTip(bill, tipPercentage);
+// var finalTotal = tipAmount + bill;
+// console.log(finalTotal + " is the total for a " + bill + " bill with a " + tipPercentage + " tip.");
 
 
 
-function doShit (item1, item2, item3){
-    var totalItems = item1 + item2 + item3
+
+function doShit(item1, item2, item3){
+    var totalItems = item1 + item2 + item3;
     return console.log(totalItems);
 }
 
-var item1value = 1;
+var item1value = 100;
 
 
-function doItemOne () {
+function doItemOne() {
     return item1value;
 }
-function doItemTwo () {
+function doItemTwo() {
     return "e";
 }
-function doItemThree () {
+function doItemThree() {
     return "s";
 }
 
@@ -134,3 +154,16 @@ function doItemThree () {
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+
+
+function applyDiscount(originalPrice, discountPercent) {
+    var discountAmount = originalPrice * discountPercent;
+    var newPrice = originalPrice - discountAmount;
+    return newPrice;
+}
+
+var originalPrice = 100;
+var discountPercent = .25;
+var newTotal = applyDiscount(originalPrice, discountPercent);
+console.log(newTotal + " is the final price after apply the " + discountPercent + " discount to " + originalPrice);
