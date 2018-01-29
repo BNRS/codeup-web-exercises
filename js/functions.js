@@ -43,7 +43,6 @@ function randomNumberUnder(number) {
     return Math.ceil(Math.random() * number);
 }
 
-
 var random = Math.floor((Math.random() * 3) + 1);
 
 /**
@@ -94,8 +93,13 @@ function calculateTip(bill, tipPercentage) {
     }
 }
 
-// return bill * tipPercentage;
-
+function billSplitter (subTotal, friends) {
+    var tip = subTotal * 0.15;
+    var tax = subTotal * 0.0825;
+    var billTotal = subTotal + tip + tax;
+    var splitTotal = billTotal / friends;
+    return '$' + splitTotal.toFixed(2);
+}
 
 
 /**
@@ -105,7 +109,6 @@ function calculateTip(bill, tipPercentage) {
  * then display the dollar amount they should tip
  */
 
-
 var bill = parseFloat(prompt('How much was your bill?'));
 var tipPercentage = parseFloat(prompt('please put tip in decimal form on your bill of ' + bill + ' dollars'));
 var totalTip = calculateTip(bill, tipPercentage);
@@ -113,15 +116,10 @@ var finalTotal = totalTip + bill;
 alert("you tipped " + totalTip + " dollars on your bill of " + bill + " for a total bill of " + finalTotal + " dollars");
 console.log("you tipped " + totalTip + " dollars on your bill of " + bill + " for a total bill of " + finalTotal + " dollars");
 
-// var bill = parseFloat(prompt("How much was your lunch?"));
-// var tipPercentage = parseFloat(prompt("Please input a tip percentage as a decimal: example .2 means 20%"));
-// var tipAmount = calculateTip(bill, tipPercentage);
-// var finalTotal = tipAmount + bill;
-// console.log(finalTotal + " is the total for a " + bill + " bill with a " + tipPercentage + " tip.");
 
 
 
-
+//--------------------------------------------//
 function doShit(item1, item2, item3){
     var totalItems = item1 + item2 + item3;
     return console.log(totalItems);
@@ -139,6 +137,8 @@ function doItemTwo() {
 function doItemThree() {
     return "s";
 }
+//--------------------------------------------//
+
 
 /**
  * TODO:
@@ -162,6 +162,7 @@ function applyDiscount(originalPrice, discountPercent) {
     var newPrice = originalPrice - discountAmount;
     return newPrice;
 }
+
 
 var originalPrice = 100;
 var discountPercent = .25;
