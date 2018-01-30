@@ -24,6 +24,15 @@
 //     return value;
 // }
 
+function login(){
+    var username = prompt('Enter your username');
+    var password = prompt('Enter your password');
+    var message = (username === 'Username' && password === 'Test') ? 'Logged In' : 'Please try again';
+    alert (message);
+}
+
+// login();
+
 
 
 // Make a function named isOdd(number)
@@ -115,14 +124,14 @@ function isNegative(number) {
 
 // Make a function named isBoolean(input)
 function isBoolean(input) {
-  return typeOf(input) === 'boolean';
+  return typeof input === 'boolean';
 }
 // Make a function named isTrue(boolean)
 function isTrue(boolean) {
   return !!boolean;
 }
 // Make a function named isFalse(boolean)
-function isFalse (boolean) {
+function isFalse(boolean) {
   return !boolean;
 }
 
@@ -137,7 +146,7 @@ function isFalsey (input) {
 }
 
 // Make a function named isVowel(letter)
-function isVowel (letter) {
+function isVowel(letter) {
   var vowels = ['a','e', 'i', 'o', 'u'];
   for (var i = 0; i < vowels.length; i++) {
     if (letter === vowels[i]) {
@@ -206,7 +215,7 @@ function hasLowerCase(string) {
 
 // Make a function named isSpace(letter) that returns if a character is a space character
 function isSpace (letter) {
-  return letter === ' ';
+  return letter == ' ';
 }
 
 console.log(isSpace(' '));
