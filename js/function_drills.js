@@ -33,7 +33,22 @@ function login(){
 
 // login();
 
-
+// var random = Math.floor((Math.random()*100)+1);
+//
+// console.log('random number is ' + random);
+//
+// // TODO:
+// // Create a function called 'isOdd' that takes a number as a parameter.
+// // The function should use the ternary operator to log a message.
+// // The log should tell the number passed in and whether it is odd or not.
+//
+// function isOdd(testNumber) {
+//     (testNumber % 2 === 1) ? console.log('number was odd') : console.log('number was even');
+// }
+//
+// // TODO: Call the function 'isOdd' passing the variable 'random' as a parameter.
+//
+// isOdd(random);
 
 // Make a function named isOdd(number)
 // Make a function named isEven(number)
