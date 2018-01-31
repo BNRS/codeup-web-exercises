@@ -1,5 +1,85 @@
 "use strict";
 
+/**Create a while loop that uses console.log() to create the output shown below.**/
+
+// 2
+// 4
+// 8
+// 16
+// 32
+// 64
+// 128
+// 256
+// 512
+// 1024
+// 2048
+// 4096
+// 8192
+// 16384
+// 32768
+// 65536
+
+/**instructor answer**/
+// var number = 2;
+// var end = 65536;
+//
+// while(number <= end) {
+//     console.log(number);
+//     number = number * 2;
+// }
+//
+
+/**my answer**/
+// var i = 1;
+//
+// while (i < 65536) {
+//     i *= 2
+//     console.log(i);
+// }
+
+/** An ice cream seller can't go home until she sells all of her cones.
+// Write a JS program that generates a random number between 50 and 100 representing the amount of cones to sell.
+// Your code should generate numbers between 1 and 5, simulating the amount of cones being bought by her clients.
+// Use a do-while loop to log to the console the amount of cones sold to each person. This is how you get the random numbers.**/
+
+/**instructor answer**/
+// // allCones represents the entire inventory
+// var allCones = Math.floor(Math.random() * 50) + 50;
+// // order will hold a random number of cone orders each time through the loop
+// var order;
+// console.log("Welcome to the icecream stand");
+// console.log("I start my day with " + allCones + " cones.");
+// do {
+//     order = Math.floor(Math.random() * 5) + 1;
+//     if(order <= allCones) {
+//         allCones = allCones - order;
+//         console.log("Sold " + order + " cones.");
+//     } else {
+//         console.log("Cannot sell you " + order + " cones. I only have " + allCones);
+//         console.log("Next customer, please!");
+//     }
+//
+// } while(allCones > 0);
+//
+// console.log("I sold all the ice cream cones and get to go home!");
+
+
+/**my answer**/
+
+// var allCones = Math.floor(Math.random() * 50) + 50;
+//
+// do {
+//     var cones = Math.floor(Math.random() * 5) + 1;
+//     allCones = allCones - cones;
+//     console.log("I sold " + cones + " cones.");
+//     if (cones > allCones)
+//     {console.log("I cannot sell you " + cones + ", I only have " + allCones + " left.")
+//     }
+//
+// }   while (allCones > 0);
+//     console.log("I'm all out of cones to sell!");
+
+
 // var i = 0;
 //
 // while (i < 10) {
@@ -55,7 +135,7 @@
 //     console.log('for loop iteration #' + i + ', j = ' + j);
 // }
 
-// Break and Continue //
+/**Break and Continue**/
 
 // var numberToStopAt = 5;
 //
@@ -73,7 +153,7 @@
 // }
 
 
-//   Continuing the Next Iteration of a Loop   //
+/**Continuing the Next Iteration of a Loop**/
 
 // for (var i = 1; i < 100; i++) {
 //
@@ -86,94 +166,3 @@
 //
 //     console.log('Here is a lovely even number: ' + i);
 // }
-
-// var i = 1;
-//
-// while (i < 65536) {
-//     i *= 2
-//     console.log(i);
-// }
-
-
-
-// for (var i = 100; i >= 5; i -=5) {
-//     console.log(i);
-// }
-
-
-// Use a do-while loop to log to the console the amount of cones sold to each person.
-// This is how you get the random numbers.
-
-// Do While //
-
-
-// var allCones = Math.floor(Math.random() * 50) + 50;
-//
-// do {
-//     var cones = Math.floor(Math.random() * 5) + 1;
-//     allCones = allCones - cones;
-//     console.log("I sold " + cones + " cones.");
-//     if (cones > allCones)
-//     {console.log("I cannot sell you " + cones + ", I only have " + allCones + " left.")
-//     }
-//
-// }   while (allCones > 0);
-//     console.log("I'm all out of cones to sell!");
-
-
-
-// var allCones = Math.floor(Math.random() * 50) + 50;
-//
-// do {
-//     var cones = Math.floor(Math.random() * 5) + 1;
-//
-//     if (cones > allCones) {
-//         console.log("I cannot sell you " + cones + ", I only have " + allCones + " left.")
-//     } else {
-//         allCones -= cones;
-//         console.log("I sold " + cones + " cones.");
-//     }
-// }
-//
-// while (allCones > 0);
-// console.log("I'm all done bitches!")
-
-// var conesInStock = Math.floor(Math.random() * 50) + 50;
-//
-// do {
-//     var conesOrdered = Math.floor(Math.random() * 5) + 1;
-//
-//     if (conesOrdered > conesInStock) {
-//         console.log("I cannot sell you " + conesOrdered + ", I only have " + conesInStock + " left.")
-//     } else {
-//         conesInStock -= conesOrdered;
-//         console.log("I sold " + conesOrdered + " cones.");
-//     }
-// }
-//
-// while (conesInStock > 0);
-// console.log("I'm all done bitches!")
-
-// var allCones = Math.floor(Math.random() * 50) + 50;
-// var iteration = 0;
-//
-// do {
-//     iteration++;
-//     console.log('---------------------');
-//     console.log('iteration number ', iteration);
-//     console.log('number of cones available', allCones);
-//     console.log('cones that I tried to sell last time', cones);
-//     console.log('---------------------');
-//     var cones = Math.floor(Math.random() * 5) + 1;
-//
-//     if (cones > allCones) {
-//         console.log("I cannot sell you " + cones + ", I only have " + allCones + " left.")
-//     } else {
-//         allCones -= cones;
-//         console.log("I sold " + cones + " cones.");
-//     }
-// }
-//
-// while (allCones > 0);
-// console.log("I'm all done bitches!")
-
