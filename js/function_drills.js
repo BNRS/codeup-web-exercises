@@ -162,24 +162,18 @@ function isFalsey (input) {
 
 // Make a function named isVowel(letter)
 function isVowel(letter) {
-  var vowels = ['a','e', 'i', 'o', 'u'];
-  for (var i = 0; i < vowels.length; i++) {
-    if (letter === vowels[i]) {
-      return true;
+    var vowels = ['a','e', 'i', 'o', 'u'];
+    for (var i = 0; i < vowels.length; i++) {
+        if (letter === vowels[i]) {
+            return true;
+        }
     }
-  }
-  return false;
+    return false;
 }
 
 // Make a function named hasVowels(string) that uses isVowel to check if a string has any vowels
-function hasVowels(string) {
-  for (var i = 0; i < string.length; i++) {
-    if (isVowel(string[i])) {
-      return true;
-    }
-  }
-  return false;
-}
+
+
 
 // Make a function named isConsonant(letter)
 function isConsonant (letter) {
@@ -359,7 +353,7 @@ console.log(isBlank(' '));
 
 // Make a function named isNumeric(input) returns true/false if the input is a number or numeric string
 function isNumber (input) {
-  return !isNaN(input);
+    return !isNaN(input);
 }
 
 console.log(isNumber('5'));
