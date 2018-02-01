@@ -161,14 +161,26 @@ function isFalsey (input) {
 }
 
 // Make a function named isVowel(letter)
-function isVowel(letter) {
-    var vowels = ['a','e', 'i', 'o', 'u'];
+function isVowel2(letter) {
+    var vowels = ['a', 'e', 'i', 'o', 'u'];
     for (var i = 0; i < vowels.length; i++) {
         if (letter === vowels[i]) {
             return true;
         }
     }
-    return false;
+}
+
+
+function isVowel(letter) {
+    var vowels = ['a','e', 'i', 'o', 'u'];
+    for (var i = 0; i < vowels.length; i++) {
+        if (letter === vowels[i]) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
 
 // Make a function named hasVowels(string) that uses isVowel to check if a string has any vowels

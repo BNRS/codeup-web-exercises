@@ -81,10 +81,4 @@
     last(numbers);
 
 
-    /**Write a function called average(numList) that takes an array of numbers and returns the average**/
-
-    var numList = [1, 2, 5, 7, 8, 100];
-
-
-
 })();

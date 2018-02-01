@@ -85,11 +85,14 @@ console.log(isTwo(random) + ' because the value was ' + (random));
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
+
+
+
 function calculateTip(bill, tipPercentage) {
     if(tipPercentage < 1) {
         return bill * tipPercentage;
     } else {
-        return (tipPercentage / 100) * bill;
+        return (tipPercentage + bill);
     }
 }
 

@@ -17,11 +17,15 @@
  */
 
 
+/** instructor answer **/
 
 // var enterNumber = confirm("Would you like to enter a number?");
 // if (enterNumber) {
 //     NumberLogic();
 // }
+//
+//
+//
 //
 // function NumberLogic() {
 //     var num = prompt("Enter Number");
@@ -51,6 +55,7 @@
 //     }
 // }
 
+/** my answer **/
 
 // var userWillEnterNumber = confirm('Would you please enter your favorite number?');
 //
@@ -77,8 +82,20 @@
 
 /* ########################################################################## */
 
+/** if/else if/else example **/
 
 
+// function number(x) {
+//     if (x === 1) {
+//         return true;
+//     } else if (x === 2) {
+//         return 'you entered 2';
+//     } else if (x === 3) {
+//         return alert('you entered a 3');
+//     } else {
+//         return false;
+//     }
+// }
 
 
 
@@ -101,6 +118,9 @@
  * console.logging the function's return value
  */
 
+
+/** my answer **/
+
 // function analyzeColor(input) {
 //     if (input === 'green') {
 //         return "It's green, which is the color of grass";
@@ -119,7 +139,7 @@
 //     }
 // }
 
-//------ Instructor Answer --------//
+/** instructor answer **/
 
 // function analyzeColor(input) {
 //     var message;
@@ -195,7 +215,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 //         console.log('I do not know anything by that color');
 // }
 
-// Instructor answer //
+/** Instructor answer **/
 
 // function analyzeColor(input) {
 //     var message;
@@ -313,28 +333,27 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 // }
 
 
-// var discountAmount = [ 1, .1, .25, .35, .5, 0];
 // var randomDiscount = discountAmount[Math.floor(Math.random() * discountAmount.length)];
 
 
-function calculateTotal(luckyNumber, total) {
-
-    if(luckyNumber == 0) {
-        return total;
-    } else if(luckyNumber == 1) {
-        return total - (total * .1);
-    } else if(luckyNumber == 2) {
-        return total - (total * .25);
-    } else if(luckyNumber == 3) {
-        return total - (total * .35);
-    } else if(luckyNumber == 4) {
-        return total - (total * .50);
-    } else if(luckyNumber == 5) {
-        return total - (total * 1);
-    } else {
-        return total;
-    }
-}
+// function calculateTotal(luckyNumber, total) {
+//
+//     if(luckyNumber == 0) {
+//         return total;
+//     } else if(luckyNumber == 1) {
+//         return total - (total * .1);
+//     } else if(luckyNumber == 2) {
+//         return total - (total * .25);
+//     } else if(luckyNumber == 3) {
+//         return total - (total * .35);
+//     } else if(luckyNumber == 4) {
+//         return total - (total * .50);
+//     } else if(luckyNumber == 5) {
+//         return total - (total * 1);
+//     } else {
+//         return total;
+//     }
+// }
 
 
 
@@ -348,15 +367,14 @@ function calculateTotal(luckyNumber, total) {
 //
 
 // Generate a random number between 0 and 6
-
-var luckyNumber = Math.floor(Math.random() * 6);
-
-var total = parseFloat(prompt("How much was your bill?"));
-alert("Your lucky number is " + luckyNumber);
-alert("your price before the discount is " + total);
-alert("Your new total after the discount is " + calculateTotal(luckyNumber, total));
-
-
+// var luckyNumber = Math.floor(Math.random() * 6);
+//
+// var total = parseFloat(prompt("How much was your bill?"));
+// alert("Your lucky number is " + luckyNumber);
+// alert("your price before the discount is " + total);
+// alert("Your new total after the discount is " + calculateTotal(luckyNumber, total));
+//
+//
 
 
 
