@@ -39,7 +39,6 @@ function isNumeric(n) {
 
 
 
-
 // 3. Define a function named isString that takes in a value as an input and returns a boolean if the input provided is a string or not. Numeric strings will count as strings and should return true.
 // isString("Hello")           // true
 // isString("Codeup")          // true
@@ -394,3 +393,12 @@ function sumOfSquares(arg1, arg2) {
 // console.log(sumOfSquares(2, false)    );  // false
 // console.log(sumOfSquares(null)        );  // false
 // console.log(sumOfSquares()            );  // false
+
+var data = {
+    name: "John",
+    age: 28,
+    maritalStatus: true
+}
+
+for (var elem in data);
+console.log(elem);
