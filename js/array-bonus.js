@@ -126,7 +126,26 @@ console.log(multiplyAll([2,3,4,5]));
 // Create a phone number parser that will convert a string of numbers into a human readable format.
 // The output should depend on the number of digits (account for 7, 10, 11 digit numbers):
 
-
+function phoneNumberParser(input){
+    if (isNaN(input)){
+        console.log( 'Invalid Character Included')
+    }
+    var phoneNumber = input.toString();
+    var phoneNumberArray = phoneNumber.split ('');
+    if (phoneNumberArray.length === 7){
+        phoneNumberArray.splice(3,0,'-');
+    }
+    if (phoneNumberArray.length === 10){
+        phoneNumberArray.splice(3,0,'-');
+        phoneNumberArray.splice(7,0,'-');
+    }
+    if(phoneNumberArray.length === 11){
+        phoneNumberArray.splice(1,0,'-');
+        phoneNumberArray.splice(5,0,'-');
+        phoneNumberArray.splice(9,0,'-');
+    }
+    return phoneNumberArray.join('');
+}
 
 
 // function numberParser(string) {

@@ -56,19 +56,19 @@
      */
 
 
-    var person = {
-        firstName: "Ben",
-        lastName: "Rasmussen"
-    };
-
-    console.log(person.firstName);
-    console.log(person.lastName);
-
-    var anotherPerson = {};
-    anotherPerson.firstName = "Andrew";
-    anotherPerson.lastName = "Rasmussen";
-
-    console.log(anotherPerson.firstName + " " + anotherPerson.lastName);
+    // var person = {
+    //     firstName: "Ben",
+    //     lastName: "Rasmussen"
+    // };
+    //
+    // console.log(person.firstName);
+    // console.log(person.lastName);
+    //
+    // var anotherPerson = {};
+    // anotherPerson.firstName = "Andrew";
+    // anotherPerson.lastName = "Rasmussen";
+    //
+    // console.log(anotherPerson.firstName + " " + anotherPerson.lastName);
 
 
     /**
@@ -81,11 +81,11 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
-    person.sayHello = function() {
-        return "Hello!" + " " + this.firstName + " "  + this.lastName;
-};
-
-    console.log(person.sayHello());
+//     person.sayHello = function() {
+//         return "Hello!" + " " + this.firstName + " "  + this.lastName;
+// };
+//
+//     console.log(person.sayHello());
 
 
 
@@ -104,34 +104,34 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
-    var books = [
-        {
-            title: "Lord of The Rings",
-            author: {
-                firstName: "J.R",
-                lastName: "Tolkien"
-            }
-        },
-        {
-            title: "Lord of the Flies",
-            author: {
-                firstName: "William",
-                lastName: "Golding"
-            }
-        },
-        {
-            title: "Wild at Heart",
-            author: {
-                firstName: "John",
-                lastName: "Eldridge"
-            }
-        }
-    ];
-
-
-    console.log(books[0].title);
-    console.log(books[1].author.firstName);
-    console.log(books[2].title);
+    // var books = [
+    //     {
+    //         title: "Lord of The Rings",
+    //         author: {
+    //             firstName: "J.R",
+    //             lastName: "Tolkien"
+    //         }
+    //     },
+    //     {
+    //         title: "Lord of the Flies",
+    //         author: {
+    //             firstName: "William",
+    //             lastName: "Golding"
+    //         }
+    //     },
+    //     {
+    //         title: "Wild at Heart",
+    //         author: {
+    //             firstName: "John",
+    //             lastName: "Eldridge"
+    //         }
+    //     }
+    // ];
+    //
+    //
+    // console.log(books[0].title);
+    // console.log(books[0].author.firstName);
+    // console.log(books[0].author.lastName);
 
 
 
@@ -148,26 +148,26 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
 
-    var person = {
-        firstName: "John",
-        lastName: "McClain",
-        sayHello: function() {
-            return "Hello from " + this.firstName + " " + this.lastName;
-        }
-    };
-
-    console.log(person.firstName);
-    console.log(person.lastName);
-
-    var anotherPerson = {};
-    anotherPerson.firstName = "Jackie";
-    anotherPerson.lastName = "Chan";
-    anotherPerson.sayHello = function() {
-        return "Hello from " + this.firstName + " " + this.lastName;
-    };
-
-    console.log(anotherPerson.firstName + " " + anotherPerson.lastName);
-
+    // var person = {
+    //     firstName: "John",
+    //     lastName: "McClain",
+    //     sayHello: function() {
+    //         return "Hello from " + this.firstName + " " + this.lastName;
+    //     }
+    // };
+    // //
+    // console.log(person.firstName);
+    // console.log(person.lastName);
+    //
+    // var anotherPerson = {};
+    // anotherPerson.firstName = "Jackie";
+    // anotherPerson.lastName = "Chan";
+    // anotherPerson.sayHello = function() {
+    //     return "Hello from " + this.firstName + " " + this.lastName;
+    // };
+    //
+    // console.log(anotherPerson.firstName + " " + anotherPerson.lastName);
+    // console.log(anotherPerson.sayHello());
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -179,8 +179,8 @@
      */
 
 
-    console.log(person.sayHello());
-    console.log(anotherPerson.sayHello());
+    // console.log(person.sayHello());
+    // console.log(anotherPerson.sayHello());
 
 
     /** TODO:
@@ -197,19 +197,43 @@
      * and console.log the relevant messages for each person
      */
 
-    var shoppers = [
-        {name: 'Cameron', amount: 180},
-        {name: 'Ryan', amount: 250},
-        {name: 'George', amount: 320}
-    ];
+    // var customers = [
+    //     {
+    //         name: "ben",
+    //         spent: 20
+    //     },
+    //     {
+    //         name: "bob",
+    //         spent: 40
+    //     },
+    //     {
+    //         name: "linda",
+    //         spent: 50
+    //     }
+    // ];
+    //
+    // customers.forEach(function (singleCustomer) {
+    //
+    // });
 
 
-    shoppers.forEach(function(shopper) {
-        if(shopper.amount > 200) {
-            shopper.amount = shopper.amount - (shopper.amount * .12);
-        }
-        console.log(shopper.name + " spend " + shopper.amount);
-    });
+
+
+
+
+    // var shoppers = [
+    //     {name: 'Cameron', amount: 180},
+    //     {name: 'Ryan', amount: 250},
+    //     {name: 'George', amount: 320}
+    // ];
+    //
+    //
+    // shoppers.forEach(function(shopper) {
+    //     if(shopper.amount > 200) {
+    //         shopper.amount = shopper.amount - (shopper.amount * .12);
+    //     }
+    //     console.log(shopper.name + " spend " + shopper.amount);
+    // });
 
 
     /** TODO:
@@ -225,7 +249,27 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
+var books = [
 
+        {
+            title: "1984",
+            author: {
+                firstName: "George",
+                lastName: "Orwell"
+            }
+
+        },
+
+        {
+            title: "The Lord of The Rings",
+            author: {
+                firstName: "J. R.",
+                lastName: "Tolkein"
+            }
+
+        }
+
+    ];
 
 
     /**
@@ -252,6 +296,17 @@
      *      ---
      *      ...
      */
+
+    books.forEach(function(book, index) {
+        var output = "";
+        output += "Book # " + (index + 1) + "\n";
+        output += "Title: " + book.title + "\n";
+        output += "Author: " + book.author.firstName + " " + book.author.lastName + "\n";
+        output += ""
+        console.log(output);
+    });
+
+    for
 
     /**
      * Bonus:
