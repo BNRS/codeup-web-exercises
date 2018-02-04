@@ -302,11 +302,11 @@ var books = [
         output += "Book # " + (index + 1) + "\n";
         output += "Title: " + book.title + "\n";
         output += "Author: " + book.author.firstName + " " + book.author.lastName + "\n";
-        output += ""
+        output += "";
         console.log(output);
     });
 
-    for
+
 
     /**
      * Bonus:

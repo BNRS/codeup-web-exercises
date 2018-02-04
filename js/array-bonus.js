@@ -2,7 +2,7 @@
 //
 // 1. Write a function called average(numbers) that takes in an array of numbers and returns the average
 
-function averageNumbers(input) {
+function average(input) {
     var total = 0;
     input.forEach(function(input) {
         total += input;
@@ -10,16 +10,6 @@ function averageNumbers(input) {
     return (total/input.length);
 }
 console.log('The average of that array is ' + average([3, 45, 56, 78]));
-
-
-function average(numbers){
-    var total = 0;
-    numbers.forEach(function(number){
-        total += number;
-    });
-    return (total/numbers.length)
-}
-console.log('The average of that array is ' + average([5,10,5,5,10]));
 
 
 // 2. Write a function called sumAll(numbers) that takes in an array of numbers and returns the sum of adding all of them.
@@ -33,7 +23,7 @@ function sumAll(numbers) {
 }
 console.log('The sum of the numbers in that array is ' + sumAll([2,2,2,2,2]));
 
-// 3. Write a function called max(numbers) that takes in an array of numberrs and returns the largest
+// 3. Write a function called max(numbers) that takes in an array of numbers and returns the largest
 
 function max(array){
     return Math.max(array);
@@ -43,10 +33,13 @@ console.log('The largest number in the array is ' + max([1,2,5,1]));
 
 // 4. Write a function called min(numbers) that takes in an array of numbers and returns the smallest
 
+Array.max = function( array ){
+    return Math.max.apply( Math, array );
+};
 
-
-
-
+Array.min = function( array ){
+    return Math.min.apply( Math, array );
+};
 
 
 // 5. Write a function called reverseArray(array) that takes in an array and returns the elements in reverse order
@@ -126,26 +119,26 @@ console.log(multiplyAll([2,3,4,5]));
 // Create a phone number parser that will convert a string of numbers into a human readable format.
 // The output should depend on the number of digits (account for 7, 10, 11 digit numbers):
 
-function phoneNumberParser(input){
-    if (isNaN(input)){
-        console.log( 'Invalid Character Included')
-    }
-    var phoneNumber = input.toString();
-    var phoneNumberArray = phoneNumber.split ('');
-    if (phoneNumberArray.length === 7){
-        phoneNumberArray.splice(3,0,'-');
-    }
-    if (phoneNumberArray.length === 10){
-        phoneNumberArray.splice(3,0,'-');
-        phoneNumberArray.splice(7,0,'-');
-    }
-    if(phoneNumberArray.length === 11){
-        phoneNumberArray.splice(1,0,'-');
-        phoneNumberArray.splice(5,0,'-');
-        phoneNumberArray.splice(9,0,'-');
-    }
-    return phoneNumberArray.join('');
-}
+// function phoneNumberParser(input){
+//     if (isNaN(input)){
+//         console.log( 'Invalid Character Included')
+//     }
+//     var phoneNumber = input.toString();
+//     var phoneNumberArray = phoneNumber.split ('');
+//     if (phoneNumberArray.length === 7){
+//         phoneNumberArray.splice(3,0,'-');
+//     }
+//     if (phoneNumberArray.length === 10){
+//         phoneNumberArray.splice(3,0,'-');
+//         phoneNumberArray.splice(7,0,'-');
+//     }
+//     if(phoneNumberArray.length === 11){
+//         phoneNumberArray.splice(1,0,'-');
+//         phoneNumberArray.splice(5,0,'-');
+//         phoneNumberArray.splice(9,0,'-');
+//     }
+//     return phoneNumberArray.join('');
+// }
 
 
 // function numberParser(string) {
@@ -220,7 +213,39 @@ function phoneNumberParser(input){
 // 4) View all student names in reverse alphabetical order
 // Store the student names in an array. Account for invalid user input.
 
-
+//
+// var intervalId = setInterval(ted, 0500);
+//
+// function ted() {
+//
+//     var random = Math.floor(Math.random()* 7) +1;
+//
+//     if (random === 1) {
+//         document.bgColor = "#4cb931";
+//     }
+//
+//     else if (random === 2) {
+//         document.bgColor = "#554d98";
+//     }
+//
+//     else if (random === 3) {
+//         document.bgColor = "#F302F34";
+//     }
+//     else if (random === 4) {
+//         document.bgColor = "#032F34";
+//     }
+//     else if (random === 5) {
+//         document.bgColor = "#e84235";
+//     }
+//     else if (random === 6) {
+//         document.bgColor = "#6e4711";
+//     }
+//     else if (random === 7) {
+//         document.bgColor = "#37824a";
+//     } else {
+//         document.bgColor = "#6c3782";
+//     }
+// }
 
 
 
