@@ -8,6 +8,7 @@
 
 body {
     background: white;
+    background: url("./pattern.jpg");
 }
 
 .main {
@@ -39,4 +40,5 @@ body {
     height: 100%;
     padding-top: 14px;
     font-family: Kanit, sans-serif;
+    border-radius: 5px;
 }

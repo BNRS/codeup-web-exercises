@@ -276,6 +276,7 @@ var books = [
      * TODO:
      * Loop through the books array and output the following information about
      * each book:
+     *
      * - the book number (use the index of the book in the array)
      * - the book title
      * - author's full name (first name + last name)
