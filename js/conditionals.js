@@ -27,33 +27,33 @@
 //
 //
 //
-// function NumberLogic() {
-//     var num = prompt("Enter Number");
-//     num = parseInt(num);
-//
-//     if (isNaN(num)) {
-//        alert('you did not enter a number');
-//     } else {
-//
-//         //Odd or even number
-//         if (num % 2 === 0) {
-//             alert("Number is even");
-//         } else {
-//             alert("number is odd");
-//         }
-//
-//         //Number Is Positive/Negative
-//         if (num < 0) {
-//             alert("Number is negative");
-//         } else if (num > 0) {
-//             alert("Number is positive")
-//         } else {
-//             alert("Number IS 0");
-//         }
-//         //Add 100 to the number
-//         alert("Number + 100 is: " + (num + 100));
-//     }
-// }
+function NumberLogic() {
+    var num = prompt("Enter Number");
+    num = parseInt(num);
+
+    if (isNaN(num)) {
+       alert('you did not enter a number');
+    } else {
+
+        //Odd or even number
+        if (num % 2 === 0) {
+            alert("Number is even");
+        } else {
+            alert("number is odd");
+        }
+
+        //Number Is Positive/Negative
+        if (num < 0) {
+            alert("Number is negative");
+        } else if (num > 0) {
+            alert("Number is positive")
+        } else {
+            alert("Number IS 0");
+        }
+        //Add 100 to the number
+        alert("Number + 100 is: " + (num + 100));
+    }
+}
 
 /** my answer **/
 
@@ -418,31 +418,31 @@ depending on whether or not all the following conditions are true:
 5) EXTRA BONUS: is not the same forwards and backwards
 */
 
-// function isValidPassword(input) {
-//     var lengthIsGood = input.length == 6;
-//     var hasAtLeastOneLetter = hasLetter(input);
-//     var hasAtLeastOneNumber = hasNumber(input);
-//     var hasLowerCaseLetter;
-//     var hasUpperCaseLetter;
-//     var alphaNumeric;
-//
-//     return lengthIsGood && hasAtLeastOneLetter && hasAtLeastOneNumber && hasLowerCaseLetter && hasUpperCaseLetter && alphaNumeric;
-// }
-//
-// function hasLetter(input) {
-//     input = input.toLowerCase();
-//
-//     return input.includes("a") || input.includes("b") || input.includes("c") ||
-//         input.includes("d") || input.includes("e") || input.includes("f") ||
-//         input.includes("g") || input.includes("h");
-// }
-//
-// function hasNumber(input) {
-//     input = input.toLowerCase();
-//
-//     return input.includes(0) || input.includes(1) || input.includes(2) ||
-//         input.includes(3) || input.includes(4) || input.includes(5) ||
-//         input.includes(6) || input.includes(7) || input.includes(8) ||
-//         input.includes(9) || input.includes(0);
-// }
+function isValidPassword(input) {
+    var lengthIsGood = input.length == 6;
+    var hasAtLeastOneLetter = hasLetter(input);
+    var hasAtLeastOneNumber = hasNumber(input);
+    var hasLowerCaseLetter;
+    var hasUpperCaseLetter;
+    var alphaNumeric;
+
+    return lengthIsGood && hasAtLeastOneLetter && hasAtLeastOneNumber && hasLowerCaseLetter && hasUpperCaseLetter && alphaNumeric;
+}
+
+function hasLetter(input) {
+    input = input.toLowerCase();
+
+    return input.includes("a") || input.includes("b") || input.includes("c") ||
+        input.includes("d") || input.includes("e") || input.includes("f") ||
+        input.includes("g") || input.includes("h");
+}
+
+function hasNumber(input) {
+    input = input.toLowerCase();
+
+    return input.includes(0) || input.includes(1) || input.includes(2) ||
+        input.includes(3) || input.includes(4) || input.includes(5) ||
+        input.includes(6) || input.includes(7) || input.includes(8) ||
+        input.includes(9) || input.includes(0);
+}
 

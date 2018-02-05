@@ -2,34 +2,42 @@
 //
 // 1. Write a function called average(numbers) that takes in an array of numbers and returns the average
 
-function average(input) {
+function average(numbers) {
     var total = 0;
-    input.forEach(function(input) {
-        total += input;
+    numbers.forEach(function (numbers) {
+        total += numbers;
     });
-    return (total/input.length);
+return (total/numbers.length)
 }
-console.log('The average of that array is ' + average([3, 45, 56, 78]));
+
+
+
+
+// function average(input) {
+//     var total = 0;
+//     input.forEach(function(input) {
+//         total += input;
+//     });
+//     return (total/input.length);
+// }
+// console.log('The average of that array is ' + average([3, 45, 56, 78]));
 
 
 // 2. Write a function called sumAll(numbers) that takes in an array of numbers and returns the sum of adding all of them.
 
 function sumAll(numbers) {
     var total = 0;
-    numbers.forEach(function(number){
-        total += number;
+    numbers.forEach(function (numbers) {
+        total += numbers;
     });
-    return total;
+    return (total + numbers.length);
 }
-console.log('The sum of the numbers in that array is ' + sumAll([2,2,2,2,2]));
 
 // 3. Write a function called max(numbers) that takes in an array of numbers and returns the largest
 
-function max(array){
-    return Math.max(array);
+function max(numbers) {
+    return Math.max(numbers);
 }
-
-console.log('The largest number in the array is ' + max([1,2,5,1]));
 
 // 4. Write a function called min(numbers) that takes in an array of numbers and returns the smallest
 
@@ -43,6 +51,7 @@ Array.min = function( array ){
 
 
 // 5. Write a function called reverseArray(array) that takes in an array and returns the elements in reverse order
+
 function reverseArray(array){
     return array.reverse();
 }
@@ -52,7 +61,9 @@ console.log(reverseArray([1,2,3,4,5]));
 
 // 6. Write a function called randomElement(array) that takes in an array and returns a random element
 
-
+function randomElement(array) {
+    return array[Math.floor(Math.random()*array.length)];
+}
 
 
 
@@ -247,6 +258,18 @@ console.log(multiplyAll([2,3,4,5]));
 //     }
 // }
 
+
+// function declareWinner(fighter1, fighter2, firstAttacker) {
+//     var fac1 = Math.ceil( fighter1.health / fighter2.damagePerAttack );
+//     var fac2 = Math.ceil( fighter2.health / fighter1.damagePerAttack );
+//     if(fac1 < fac2) {
+//         return fighter2.name;
+//     } else if(fac2 < fac1) {
+//         return fighter1.name;
+//     } else {
+//         return firstAttacker;
+//     }
+// }
 
 
 
