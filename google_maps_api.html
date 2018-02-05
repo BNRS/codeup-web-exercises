@@ -18,21 +18,23 @@
 
 
     <div id="map"></div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxIPbNd4ljI6NdSyP5ugk4XoKDzw2VEZM"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6cx8EcbPKNE0phY_YiAlNpsvFEE-aadU"></script>
     <script>
         "use strict";
+
+        // alamo longitude latitude //
 
         var mapDisplay = document.getElementById("map");
 
         var options = {
-            zoom: 8,
+            zoom: 20,
             center: {
-                lat: 29.4268,
-                lng: -98.4896
+                lat: 29.4260,
+                lng: -98.4861
             }
         };
 
-        var map = new google,maps.Map(mapDisplay, options);
+        var map = new google.maps.Map(mapDisplay, options);
 
     </script>
 </body>
