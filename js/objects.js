@@ -1,140 +1,4 @@
 (function() {
-"use strict";
-
-// var cars = [
-//     {
-//         make: "Toyota",
-//         model: "Camry",
-//         features: ["Automatic Windows", "Bluetooth Connectivity", "GPS Navigation"],
-//         owner: {
-//             name: "Jane Doe",
-//             age: 30
-//         }
-//     },
-//     {
-//         make: "Honda",
-//         model: "Accord",
-//         features: ["Automatic Windows", "Great Gas Mileage", "AM/FM Radio"],
-//         owner: {
-//             name: "John Doe",
-//             age: 31
-//         }
-//     }
-// ];
-//
-// // console.log("The first car is a " + cars[0].make + " " + cars[0].model + ".");
-// // console.log("The owner of the second car is " + cars[1].owner.name + ".");
-//
-// console.log("Here are all the features of all the cars:");
-// cars.forEach(function(car) {
-//     car.features.forEach(function(feature) {
-//         console.log(feature);
-//     });
-// });
-
-// var car = {};
-// car.make = "Toyota";
-// car.model = "Camry";
-//
-// // create a honk method on the car object
-// car.honk = function () {
-//     alert("Honk! Honk!");
-// };
-//
-// // honk the horn
-// car.honk();
-
-    /**
-     * TODO:
-     * Create an object with firstName and lastName properties that are strings
-     * with your first and last name. Store this object in a variable named
-     * `person`.
-     *
-     * Example:
-     *  > console.log(person.firstName) // "Rick"
-     *  > console.log(person.lastName) // "Sanchez"
-     */
-
-
-    // var person = {
-    //     firstName: "Ben",
-    //     lastName: "Rasmussen"
-    // };
-    //
-    // console.log(person.firstName);
-    // console.log(person.lastName);
-    //
-    // var anotherPerson = {};
-    // anotherPerson.firstName = "Andrew";
-    // anotherPerson.lastName = "Rasmussen";
-    //
-    // console.log(anotherPerson.firstName + " " + anotherPerson.lastName);
-
-
-    /**
-     * TODO:
-     * Add a sayHello method to the person object that returns a greeting using
-     * the firstName and lastName properties.
-     * console.log the returned message to check your work
-     *
-     * Example
-     * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
-     */
-
-//     person.sayHello = function() {
-//         return "Hello!" + " " + this.firstName + " "  + this.lastName;
-// };
-//
-//     console.log(person.sayHello());
-
-
-
-
-
-    /** TODO:
-     * Create an array of objects that represent books and store it in a
-     * variable named `books`. Each object should have a title and an author
-     * property. The author property should be an object with properties
-     * `firstName` and `lastName`. Be creative and add at least 5 books to the
-     * array
-     *
-     * Example:
-     * > console.log(books[0].title) // "The Salmon of Doubt"
-     * > console.log(books[0].author.firstName) // "Douglas"
-     * > console.log(books[0].author.lastName) // "Adams"
-     */
-
-    // var books = [
-    //     {
-    //         title: "Lord of The Rings",
-    //         author: {
-    //             firstName: "J.R",
-    //             lastName: "Tolkien"
-    //         }
-    //     },
-    //     {
-    //         title: "Lord of the Flies",
-    //         author: {
-    //             firstName: "William",
-    //             lastName: "Golding"
-    //         }
-    //     },
-    //     {
-    //         title: "Wild at Heart",
-    //         author: {
-    //             firstName: "John",
-    //             lastName: "Eldridge"
-    //         }
-    //     }
-    // ];
-    //
-    //
-    // console.log(books[0].title);
-    // console.log(books[0].author.firstName);
-    // console.log(books[0].author.lastName);
-
-
-
     "use strict";
 
     /**
@@ -147,27 +11,26 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
+    var person = {
+        firstName: "John",
+        lastName: "McClain",
+        sayHello: function() {
+            return "Hello from " + this.firstName + " " + this.lastName;
+        }
+    };
 
-    // var person = {
-    //     firstName: "John",
-    //     lastName: "McClain",
-    //     sayHello: function() {
-    //         return "Hello from " + this.firstName + " " + this.lastName;
-    //     }
-    // };
-    // //
-    // console.log(person.firstName);
-    // console.log(person.lastName);
-    //
-    // var anotherPerson = {};
-    // anotherPerson.firstName = "Jackie";
-    // anotherPerson.lastName = "Chan";
-    // anotherPerson.sayHello = function() {
-    //     return "Hello from " + this.firstName + " " + this.lastName;
-    // };
-    //
-    // console.log(anotherPerson.firstName + " " + anotherPerson.lastName);
-    // console.log(anotherPerson.sayHello());
+    console.log(person.firstName);
+    console.log(person.lastName);
+
+    var anotherPerson = {};
+    anotherPerson.firstName = "Jackie";
+    anotherPerson.lastName = "Chan";
+    anotherPerson.sayHello = function() {
+        return "Hello from " + this.firstName + " " + this.lastName;
+    };
+
+    console.log(anotherPerson.firstName + " " + anotherPerson.lastName);
+
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -179,8 +42,8 @@
      */
 
 
-    // console.log(person.sayHello());
-    // console.log(anotherPerson.sayHello());
+    console.log(person.sayHello());
+    console.log(anotherPerson.sayHello());
 
 
     /** TODO:
@@ -197,43 +60,19 @@
      * and console.log the relevant messages for each person
      */
 
-    // var customers = [
-    //     {
-    //         name: "ben",
-    //         spent: 20
-    //     },
-    //     {
-    //         name: "bob",
-    //         spent: 40
-    //     },
-    //     {
-    //         name: "linda",
-    //         spent: 50
-    //     }
-    // ];
-    //
-    // customers.forEach(function (singleCustomer) {
-    //
-    // });
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
 
 
-
-
-
-
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
-    //
-    //
-    // shoppers.forEach(function(shopper) {
-    //     if(shopper.amount > 200) {
-    //         shopper.amount = shopper.amount - (shopper.amount * .12);
-    //     }
-    //     console.log(shopper.name + " spend " + shopper.amount);
-    // });
+    shoppers.forEach(function(shopper) {
+        if(shopper.amount > 200) {
+            shopper.amount = shopper.amount - (shopper.amount * .12);
+        }
+        console.log(shopper.name + " spend " + shopper.amount);
+    });
 
 
     /** TODO:
@@ -249,24 +88,42 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
-var books = [
+    var books = [
 
+        {
+            title: "The Lost World",
+            author: {
+                firstName: "Michael",
+                lastName: "Crichton"
+            }
+        },
+        {
+            title: "The Shining",
+            author: {
+                firstName: "Stephen",
+                lastName: "King"
+            }
+        },
         {
             title: "1984",
             author: {
                 firstName: "George",
                 lastName: "Orwell"
             }
-
         },
-
         {
-            title: "The Lord of The Rings",
+            title: "The Lord of the Rings",
             author: {
-                firstName: "J. R.",
-                lastName: "Tolkein"
+                firstName: "J. R. R.",
+                lastName: "Tolkien"
             }
-
+        },
+        {
+            title: "R is for Rocket",
+            author: {
+                firstName: "Ray",
+                lastName: "Bradbury"
+            }
         }
 
     ];
@@ -276,7 +133,6 @@ var books = [
      * TODO:
      * Loop through the books array and output the following information about
      * each book:
-     *
      * - the book number (use the index of the book in the array)
      * - the book title
      * - author's full name (first name + last name)
@@ -298,14 +154,27 @@ var books = [
      *      ...
      */
 
-    books.forEach(function(book, index) {
+
+    // with a for loop
+    for (var i = 0; i < books.length; i += 1) {
+        var output = "";
+        output += "Book # " + (i + 1);
+        output += "Title: " + books[i].title;
+        output += "Author: " + books[i].author.firstName + " " + books[i].author.lastName;
+        output += "---";
+        console.log(output);
+    }
+
+    // with a forEach
+    books.forEach(function(bob, index) {
         var output = "";
         output += "Book # " + (index + 1) + "\n";
-        output += "Title: " + book.title + "\n";
-        output += "Author: " + book.author.firstName + " " + book.author.lastName + "\n";
-        output += "";
+        output +=  "Title: " + bob.title + "\n";
+        output += "Author: " + bob.author.firstName + " " + bob.author.lastName + "\n";
+        output += "---\n";
         console.log(output);
     });
+
 
 
 
@@ -319,5 +188,47 @@ var books = [
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+
+    // Function to create a book object
+    function createBook(title, author) {
+        var nameArray = author.split(" ");
+        var firstName = nameArray[0];
+        var lastName = nameArray[1];
+        return {
+            title: title,
+            author: {
+                firstName: firstName,
+                lastName: lastName
+            }
+        }
+    }
+
+
+    // Create books array using calls to createBook() function
+    var books = [
+        createBook("1984", "George Orwell"),
+        createBook("The Lord of the Rings", "J.R.R. Tolkien"),
+        createBook("R is for Rocket", "Ray Bradbury"),
+        createBook("The Lost World", "Michael Crichton"),
+        createBook("The Shining", "Stephen King")
+    ];
+
+    console.log(books);
+
+
+    // Create function to showBookInfo()
+    function showBookInfo(book, index) {
+        var output = "Title: " + book.title + "\n";
+        output += "Author: " + book.author.firstName + " " + book.author.lastName  + "\n";
+        output += "---";
+        return output;
+    }
+
+    // Use showBookInfo() to log book objects using forEach loop
+    books.forEach(function(book, index) {
+        console.log("Book # " + (index + 1) + "\n");
+        console.log(showBookInfo(book));
+    });
 
 })();
