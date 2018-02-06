@@ -61,12 +61,20 @@
                 alert("Geocoding was not successful - STATUS: " + status);
             }
         });
+
         // Create lat and long for our marker position
         var codeup = { lat: 29.426791, lng: -98.489602 };
-
 // Add the marker to our existing map
         var marker = new google.maps.Marker({
             position: codeup,
+            map: map
+        });
+
+
+        var geronimosShotBar = { lat: 35.6633, lng: 139.7318 };
+// Add the marker to our existing map
+        var geronimoMarker = new google.maps.Marker({
+            position: geronimosShotBar,
             map: map
         });
     }
