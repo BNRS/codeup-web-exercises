@@ -29,17 +29,6 @@
 
 <script>
 
-    var image = {
-        url: 'http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons-256/quilted-floral-icons-food-beverage/058294-quilted-floral-icon-food-beverage-food-pepper.png',
-        // This marker is 20 pixels wide by 32 pixels high.
-        // size: new google.maps.Size(45, 60),
-        // The origin for this image is (0, 0).
-        origin: new google.maps.Point(0, 0),
-        // The anchor for this image is the base of the flagpole at (0, 32).
-        anchor: new google.maps.Point(0, 0),
-        scaledSize: new google.maps.Size(40, 40)
-    };
-
     //default zoom for the beginning of the document is 13.
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 13
@@ -52,205 +41,67 @@
 
     //array with objects to pull info for every restaurants.
     var restaurantsInfo =[
-        {restaurant1:
-                {
-                    name:"Pondicheri",
-                    info: "<div id=\\\"content\\\">\n" +
-                    "    <div id=\\\"siteNotice\\\"></div>\n" +
-                    "    <h1 id=\\\"firstHeading\\\" class=\\\"firstHeading\\\">Pondicheri</h1>\n" +
-                    "    <div id=\\\"bodyContent\\\">\n" +
-                    "        <p><b>Pondicheri</b>, also referred to as <b>The Spice Spot</b>, is a classy\n" +
-                    "            Indian restaurant in midtown Houston who serves thousands of customers.\n" +
-                    "            Pondicheri started 10 years ago from an Indian family who were refugees.\n" +
-                    "            Their attention to detail have won them their reputation, aside from their\n" +
-                    "            very traditional, and excellent cuisine.\n" +
-                    "            Pondicheri is one of my favorite restaurants because I never leave dissapointed.\n" +
-                    "            The spices used are fresh, the bread is exquisite, and the seasoning is just perfect.\n" +
-                    "            I recommend Pondicheri to anyone who would like to try some intense flavors!</p>\n" +
-                    "        <p>THE BOOK OF EATING <a href=\\\"www.djgonzo.com\\\">\n" +
-                    "            www.djgonzo.com</a>\n" +
-                    "            (last visited Feb 6th, 2018).</p>\n" +
-                    "        </div>\n" +
-                    "    </div>"} ,
-            restaurant2:
-                {
-                    name:"Mi Pueblito",
-                    info: "<div id=\"content\">\n" +
-                    "        <div id=\"siteNotice\">\n" +
-                    "        </div>\n" +
-                    "        <h1 id=\"firstHeading\" class=\"firstHeading\">Mi Pueblito</h1>\n" +
-                    "        <div id=\"bodyContent\">\n" +
-                    "        <p><b>Mi Pueblito</b>, also referred to as <b>The Colombian Wonder</b>, is a homestyle\n" +
-                    "        Cooking Colombian restaurant located in West Houston. Mi Pueblito offers a variety of Colombian\n" +
-                    "        dishes and is a must for a rich, and flavorfull meal.\n" +
-                    "        Their attention to detail have won them their reputation, aside from their\n" +
-                    "        very traditional, and excellent cuisine.\n" +
-                    "        Mi Pueblito is one of my favorite restaurants because I never leave dissapointed.\n" +
-                    "        The spices used are fresh, the bread is exquisite, and the seasoning is just perfect.\n" +
-                    "        I recommend Mi Pueblito to anyone who would like to try some intense flavors!</p>\n" +
-                    "        <p>THE BOOK OF EATING <a href=\"www.djgonzo.com\">\n" +
-                    "        www.djgonzo.com</a>\n" +
-                    "        (last visited Feb 6th, 2018).</p>\n" +
-                    "        </div>\n" +
-                    "        </div>"} ,
-            restaurant3:
-                {
-                    name:"Latin Bites",
-                    info: "<div id=\\\"content\\\">\n" +
-                    "    <div id=\\\"siteNotice\\\"></div>\n" +
-                    "    <h1 id=\\\"firstHeading\\\" class=\\\"firstHeading\\\">Latin Bites</h1>\n" +
-                    "    <div id=\\\"bodyContent\\\">\n" +
-                    "        <p><b>Latin Bites</b>, also referred to as <b>The Peruvian Restaurant</b>, is a classy\n" +
-                    "            Peruvian Cuisine restaurant in midtown Houston who serves thousands of customers.\n" +
-                    "            Latin Bites started 10 years ago from an Indian family who were refugees.\n" +
-                    "            Their attention to detail have won them their reputation, aside from their\n" +
-                    "            very traditional, and excellent cuisine.\n" +
-                    "            Latin Bites is one of my favorite restaurants because I never leave dissapointed.\n" +
-                    "            The spices used are fresh, the bread is exquisite, and the seasoning is just perfect.\n" +
-                    "            I recommend Latin Bites to anyone who would like to try some intense flavors!</p>\n" +
-                    "        <p>THE BOOK OF EATING <a href=\\\"www.djgonzo.com\\\">\n" +
-                    "            www.djgonzo.com</a>\n" +
-                    "            (last visited Feb 6th, 2018).</p>\n" +
-                    "        </div>\n" +
-                    "    </div>"}
+        {
+            name: "Nanjin",
+            location: "2218 Fussa, Tokyo 197-0011, Japan",
+            info: "<div><h4>Nanjin!</h4></div>"
+        },
+        {
+            name: "Ippudo",
+            location: "Japan, 〒106-0032 Tokyo, Minato, Roppongi, 4 Chome−9−11, 第二小田切ビル",
+            info: "<div><h4>Ippudo!</h4></div>"
+        },
+        {
+            name: "Screaming Sushi",
+            location: "Japan, 〒197-0012 Tokyo, Fussa, Kamidaira, 1 Chome−12−19, 1 27 197 0012 第２マンションコスモ",
+            info: "<div><h4>Screaming Sushi!</h4></div>"
         }
     ];
 
+    for (var i = 0; i <= restaurantsInfo.length; i += 1){
+        var arrayContent = restaurantsInfo[i].info;
+        geocoder.geocode({ "address": restaurantsInfo[i].location }, function(results, status) {
 
-    // var contentString = '<div id="content">'+
-    //     '<div id="siteNotice">'+
-    //     '</div>'+
-    //     '<h1 id="firstHeading" class="firstHeading">Pondicheri</h1>'+
-    //     '<div id="bodyContent">'+
-    //     '<p><b>Pondicheri</b>, also referred to as <b>The Spice Spot</b>, is a classy ' +
-    //     'Indian restaurant in midtown Houston who serves thousands of customers.'+
-    //     'Pondicheri started 10 years ago from an Indian family who were refugees. '+
-    //     'Their attention to detail have won them their reputation, aside from their'+
-    //     'very traditional, and excellent cuisine.'+
-    //     'Pondicheri is one of my favorite restaurants because I never leave dissapointed.'+
-    //     'The spices used are fresh, the bread is exquisite, and the seasoning is just perfect. '+
-    //     'I recommend Pondicheri to anyone who would like to try some intense flavors!</p>'+
-    //     '<p>THE BOOK OF EATING <a href="www.djgonzo.com">'+
-    //     'www.djgonzo.com</a> '+
-    //     '(last visited Feb 6th, 2018).</p>'+
-    //     '</div>'+
-    //     '</div>';
-
-
-    // Geocode or "search" for the value passed to the address variable.
-    geocoder.geocode({ "address": "Pondicheri Houston TX" }, function(results, status) {
-
-        // if the status returns a value of OK, then display the results in the browser.
-        if (status == google.maps.GeocoderStatus.OK) {
-            // Recenter the map over the address
-            map.setCenter(results[0].geometry.location);
-            // declaring marker for first restaurant
-            var marker = new google.maps.Marker({
-                position: results[0].geometry.location,
-                map: map,
-                draggable: true, // make marker draggable.
-                animation: google.maps.Animation.DROP,
-                icon: image
-            });
-
-            // adding listener for marker.
-            marker.addListener('click', function() {
-                var infowindow = new google.maps.InfoWindow({
-                    // calling content from array
-                    content: restaurantsInfo[0].restaurant1.info
+            // if the status returns a value of OK, then display the results in the browser.
+            if (status === "OK") {
+                // Recenter the map over the address
+                map.setCenter(results[0].geometry.location);
+                // declaring marker for first restaurant
+                var marker = new google.maps.Marker({
+                    position: results[0].geometry.location,
+                    map: map,
+                    draggable: true, // make marker draggable.
+                    animation: google.maps.Animation.DROP,
                 });
-                //this calls the map and marker
-                infowindow.open(map, marker);
 
-                // when click the map will go into zoom 20 and centered on the object
-                map.setZoom(20);
-                map.setCenter(marker.getPosition());
+                // adding listener for marker.
+                marker.addListener('click', function() {
+                    var infowindow = new google.maps.InfoWindow({
+                        // calling content from array
+                        content: arrayContent,
+                    });
+                    //this calls the map and marker
+                    infowindow.open(map, marker);
 
-                //animation for markers
-                if (marker.getAnimation() !== null) {
-                    marker.setAnimation(null);
-                } else {
-                    marker.setAnimation(google.maps.Animation.BOUNCE);
-                }
-            });
+                    // when click the map will go into zoom 20 and centered on the object
+                    map.setZoom(20);
+                    map.setCenter(marker.getPosition());
 
-        } else {
-            // Show an error message with the status if our request fails
-            alert("Geocoding was not successful - STATUS: " + status);
-        }
-    });
-
-    geocoder.geocode({ "address": "Mi Pueblito Houston TX" }, function(results, status) {
-
-        // if the status returns a value of OK, then display the results in the browser.
-        if (status == google.maps.GeocoderStatus.OK) {
-
-            // Recenter the map over the address
-            map.setCenter(results[0].geometry.location);
-            var marker = new google.maps.Marker({
-                position: results[0].geometry.location,
-                map: map,
-                draggable: true,
-                animation: google.maps.Animation.DROP,
-                icon: image
-            });
-
-            marker.addListener('click', function() {
-                var infowindow = new google.maps.InfoWindow({
-                    // content: "Indian food, tasty and spicy!"
-                    content: restaurantsInfo[0].restaurant2.info
+                    //animation for markers
+                    if (marker.getAnimation() !== null) {
+                        marker.setAnimation(null);
+                    } else {
+                        marker.setAnimation(google.maps.Animation.BOUNCE);
+                    }
                 });
-                infowindow.open(map, marker);
-                map.setZoom(20);
-                map.setCenter(marker.getPosition());
 
-                if (marker.getAnimation() !== null) {
-                    marker.setAnimation(null);
-                } else {
-                    marker.setAnimation(google.maps.Animation.BOUNCE);
-                }
-            });
-        } else {
-            // Show an error message with the status if our request fails
-            alert("Geocoding was not successful - STATUS: " + status);
-        }
-    });
+            } else {
+                // Show an error message with the status if our request fails
+                alert("Geocoding was not successful - STATUS: " + status);
+            }
+        });
 
-    geocoder.geocode({ "address": "Latin Bites Houston TX" }, function(results, status) {
-
-        // if the status returns a value of OK, then display the results in the browser.
-        if (status == google.maps.GeocoderStatus.OK) {
-
-            // Recenter the map over the address
-            map.setCenter(results[0].geometry.location);
-            var marker = new google.maps.Marker({
-                position: results[0].geometry.location,
-                map: map,
-                draggable: true,
-                animation: google.maps.Animation.DROP,
-                icon: image
-            });
-
-            marker.addListener('click', function() {
-                var infowindow = new google.maps.InfoWindow({
-                    // content: "Indian food, tasty and spicy!"
-                    content: restaurantsInfo[0].restaurant3.info
-                });
-                infowindow.open(map, marker);
-                map.setZoom(20);
-                map.setCenter(marker.getPosition());
-
-                if (marker.getAnimation() !== null) {
-                    marker.setAnimation(null);
-                } else {
-                    marker.setAnimation(google.maps.Animation.BOUNCE);
-                }
-            });
-        } else {
-            // Show an error message with the status if our request fails
-            alert("Geocoding was not successful - STATUS: " + status);
-        }
-    });
+    }
 
     //  FUNCTION TO ACTIVATE SEARCH
     function initMap() {
@@ -292,19 +143,6 @@
         });
     }
     mapKeyPress();
-
-    // connect with the element of ID "search" and add a 'click' listener. If the button is click, the call the initMap function.
-    document.getElementById('search').addEventListener('click', function (){initMap()}, false);
-
-    // connect with the element of ID "user_address" and add a "keypress" listener.  If the return key is hit, then call the initMap function.
-    document.getElementById('user_address').addEventListener('keypress', function (e) {
-        var key = e.which || e.keyCode;
-        // if the key pressed is "return" which its value is 13, then call the initMap function.
-        if (key == 13) {
-            initMap();
-        }
-    });
-
     //EOF
 </script>
 
