@@ -34,10 +34,12 @@
         // default location of the application when the user opens the page.  Codeup.
         center: { lat:  35.6895, lng: 139.6917},
         // default zoom
-        zoom: 17,
+        zoom: 16,
         // default view type of the map.
-        mapTypeId: google.maps.MapTypeId.SATELLITE
-
+        // mapTypeId: google.maps.MapTypeId.SATELLITE,
+        // mapTypeId: google.maps.MapTypeId.ROADMAP,
+        // mapTypeId: google.maps.MapTypeId.HYBRID,
+        // mapTypeId: google.maps.MapTypeId.TERRAIN
     });
     // map.setTilt is an internal Google maps API function which tilts the view to a given value.  45 degrees in this case.
     map.setTilt(45);
@@ -50,7 +52,8 @@
 
         // Geocode or "search" for the value passed to the address variable.
         geocoder.geocode({
-            "address": address }, function(results, status) {
+            "address": address
+        }, function (results, status) {
 
             // if the status returns a value of OK, then display the results in the browser.
             if (status === "OK") {
@@ -62,22 +65,27 @@
             }
         });
 
-        // Create lat and long for our marker position
-        var codeup = { lat: 29.426791, lng: -98.489602 };
-// Add the marker to our existing map
-        var marker = new google.maps.Marker({
-            position: codeup,
-            map: map
-        });
 
 
-        var geronimosShotBar = { lat: 35.6633, lng: 139.7318 };
+            // Create lat and long for our marker position
+            var codeup = {lat: 29.426791, lng: -98.489602};
 // Add the marker to our existing map
-        var geronimoMarker = new google.maps.Marker({
-            position: geronimosShotBar,
-            map: map
-        });
-    }
+            var marker = new google.maps.Marker({
+                draggable: true,
+                animation: google.maps.Animation.DROP,
+                position: codeup,
+                map: map
+            });
+
+            var geronimosShotBar = {lat: 35.6633, lng: 139.7318};
+// Add the marker to our existing map
+            var geronimoMarker = new google.maps.Marker({
+                draggable: true,
+                animation: google.maps.Animation.DROP,
+                position: geronimosShotBar,
+                map: map
+            });
+        }
 
     // connect with the element of ID "search" and add a 'click' listener. If the button is click, it will call the initMap function.
     function mapClick () {
