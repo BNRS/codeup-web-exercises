@@ -32,16 +32,11 @@
     //Global variable to call the API and its default settings
     var map = new google.maps.Map(document.getElementById('map'), {
         // default location of the application when the user opens the page.  Codeup.
-        center: { lat:  35.6633, lng: 139.7318},
-        // default zoom
-        zoom: 20,
+        center: { lat:  33.9480, lng: -83.3773},
+    // default zoom
+        zoom: 15
         // default view type of the map.
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
-        // mapTypeId: google.maps.MapTypeId.SATELLITE,
-        mapTypeId: google.maps.MapTypeId.HYBRID,
-        // mapTypeId: google.maps.MapTypeId.TERRAIN
     });
-    // map.setTilt is an internal Google maps API function which tilts the view to a given value.  45 degrees in this case.
 
     function initMap() {
         // variable to call the value entered by the user.
@@ -54,28 +49,21 @@
             // if the status returns a value of OK, then display the results in the browser.
             if (status === "OK") {
                 // Recenter the map over the address
-                map.setCenter(results[4].geometry.location);
+                map.setCenter(results[0].geometry.location);
+                var marker = new google.maps.Marker({
+                    position: results[0].geometry.location,
+                    zoom: 20,
+                    draggable: true,
+                    map: map
+                });
+
             } else {
                 // Show an error message with the status if our request fails
                 alert("Geocoding was not successful - STATUS: " + status);
             }
         });
-        // add marker //
-        var geronimosShotBar = { lat: 35.6633, lng: 139.7318 };
-        // Add the marker to our existing map
-        var geronimoMarker = new google.maps.Marker({
-            position: geronimosShotBar,
-            map: map
-        });
-        // add info window //
-        var infowindow = new google.maps.InfoWindow({
-            content: "<h4>Geronimo Shot Bar, Roppongi Tokyo Japan</h4>"
-        });
-        infowindow.open(map, geronimoMarker);
-        marker.addListener("click", function () {
-            infowindow.open(map, marker);
-        })
     }
+
 
     // connect with the element of ID "search" and add a 'click' listener. If the button is click, it will call the initMap function.
     function mapClick () {
