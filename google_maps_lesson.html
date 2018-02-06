@@ -34,7 +34,7 @@
         // default location of the application when the user opens the page.  Codeup.
         center: { lat:  35.6895, lng: 139.6917},
         // default zoom
-        zoom: 17,
+        zoom: 15,
         // default view type of the map.
         mapTypeId: google.maps.MapTypeId.SATELLITE
 
@@ -77,6 +77,16 @@
             position: geronimosShotBar,
             map: map
         });
+
+
+        var infowindow = new google.maps.InfoWindow({
+            content: "<h1>San Antonio</h1>"
+        });
+
+        infowindow.open(map, marker);
+        marker.addListener("click", function () {
+            infowindow.open(map, marker);
+        })
     }
 
     // connect with the element of ID "search" and add a 'click' listener. If the button is click, it will call the initMap function.
