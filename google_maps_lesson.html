@@ -5,37 +5,85 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+
     <style>
         #map {
-            width: 800px;
-            height: 300px;
-            background: red;
+            width: 100%;
+            height: 500px;
         }
     </style>
+
+    <title>GeoCoding</title>
 </head>
 <body>
 
+<div id="map" style="border: 2px solid black"></div>
+<br>
+<div>
+    <input type="text" id="user_address" name="user_address" placeholder="Enter adress here">
+    <label for="user_address">Please enter your address</label>
+    <br>
+    <button id="search" type="button">Search</button>
+</div>
 
-<div id="map"></div>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6cx8EcbPKNE0phY_YiAlNpsvFEE-aadU"></script>
+
 <script>
-    "use strict";
+    //Global variable to call the API and its default settings
+    var map = new google.maps.Map(document.getElementById('map'), {
+        // default location of the application when the user opens the page.  Codeup.
+        center: { lat:  29.426791, lng: -98.489602},
+        // default zoom
+        zoom: 17,
+        // default view type of the map.
+        mapTypeId: 'satellite'
+    });
+    // map.setTilt is an internal Google maps API function which tilts the view to a given value.  45 degrees in this case.
+    map.setTilt(45);
 
-    // alamo longitude latitude //
+    function initMap() {
+        // variable to call the value entered by the user.
+        var address = document.getElementById("user_address").value;
+        // variable to call the Geocoder function/method.
+        var geocoder = new google.maps.Geocoder();
 
-    var mapDisplay = document.getElementById("map");
+        // Geocode or "search" for the value passed to the address variable.
+        geocoder.geocode({ "address": address }, function(results, status) {
 
-    var options = {
-        zoom: 20,
-        center: {
-            lat: 29.4260,
-            lng: -98.4861
-        }
-    };
+            // if the status returns a value of OK, then display the results in the browser.
+            if (status === "OK") {
+                // Recenter the map over the address
+                map.setCenter(results[0].geometry.location);
+            } else {
+                // Show an error message with the status if our request fails
+                alert("Geocoding was not successful - STATUS: " + status);
+            }
+        });
+    }
 
-    var map = new google.maps.Map(mapDisplay, options);
+    // connect with the element of ID "search" and add a 'click' listener. If the button is click, it will call the initMap function.
+    function mapClick () {
+        var initMapClick = document.getElementById('search');
+            initMapClick.addEventListener('click', initMap);
+    }
+    mapClick();
+
+    // connect with the element of ID "user_address" and add a "keypress" listener.  If the return key is hit, then call the initMap function.
+    function mapKeyPress () {
+        var initMapKeyPress = document.getElementById('user_address');
+            initMapKeyPress.addEventListener('keypress', function (e) {
+            var key = e.which || e.keyCode;
+            // if the key pressed is "return" which its value is 13, then call the initMap function.
+            if (key == 13) {
+                initMap();
+            }
+        });
+    }
+    mapKeyPress();
+
+    //EOF
 
 </script>
+
 </body>
 </html>
