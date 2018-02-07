@@ -58,50 +58,40 @@
         }
     ];
 
-    for (var i = 0; i <= restaurantsInfo.length; i += 1){
-        var arrayContent = restaurantsInfo[i].info;
-        geocoder.geocode({ "address": restaurantsInfo[i].location }, function(results, status) {
-
-            // if the status returns a value of OK, then display the results in the browser.
-            if (status === "OK") {
-                // Recenter the map over the address
+    restaurantsInfo.forEach(function(content){
+        geocoder.geocode({"address": content.restaurantsInfo.name}, function(results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
                 map.setCenter(results[0].geometry.location);
-                // declaring marker for first restaurant
                 var marker = new google.maps.Marker({
                     position: results[0].geometry.location,
                     map: map,
                     draggable: true, // make marker draggable.
                     animation: google.maps.Animation.DROP,
+                    icon: image
                 });
-
-                // adding listener for marker.
                 marker.addListener('click', function() {
                     var infowindow = new google.maps.InfoWindow({
-                        // calling content from array
-                        content: arrayContent,
+                        content: content.restaurant.info
                     });
-                    //this calls the map and marker
                     infowindow.open(map, marker);
+                    map.setZoom(18);
 
-                    // when click the map will go into zoom 20 and centered on the object
-                    map.setZoom(20);
                     map.setCenter(marker.getPosition());
-
                     //animation for markers
                     if (marker.getAnimation() !== null) {
                         marker.setAnimation(null);
-                    } else {
+                    }
+                    else
+                    {
                         marker.setAnimation(google.maps.Animation.BOUNCE);
                     }
                 });
-
-            } else {
-                // Show an error message with the status if our request fails
+            }
+            else {
                 alert("Geocoding was not successful - STATUS: " + status);
             }
-        });
-
-    }
+        })
+    });
 
     //  FUNCTION TO ACTIVATE SEARCH
     function initMap() {
@@ -142,9 +132,11 @@
             }
         });
     }
+
     mapKeyPress();
     //EOF
 </script>
 
 </body>
 </html>
+

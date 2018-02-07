@@ -14,7 +14,12 @@ function isBoolean(input) {
 
 
 // Define a function named isNumeric that takes in a value and returns true if the input is numeric or not. Numeric strings are numeric and should return true.
-//
+
+function isNumeric (input) {
+    return !isNaN(input);
+}
+isNumeric();
+
 // isNumeric(23)               // true
 // isNumeric("42")             // true
 // isNumeric(3.141)            // true

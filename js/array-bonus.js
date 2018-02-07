@@ -12,7 +12,6 @@ return (total/numbers.length)
 
 
 
-
 // function average(input) {
 //     var total = 0;
 //     input.forEach(function(input) {
