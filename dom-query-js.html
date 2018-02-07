@@ -30,6 +30,7 @@
 <button id="sub-header-btn">Change Sub Header</button>
 <button id="li-btn">Change Li's</button>
 <button id="sub-para-btn">Change Sub Para</button>
+<button id="change-location">Change Local!</button>
 
 <script>
     (function() {
@@ -92,6 +93,15 @@
         subHeaderBtn.addEventListener("click", changeSubHeader);
         liBtn.addEventListener("click", changeLis);
         subParaBtn.addEventListener("click", changeSubParagraph);
+
+
+
+        // var location = window.location = 'http://www.google.com';
+        function changeLocation() {
+            return window.location = "http://www.google.com";
+        }
+        var changelocal = document.getElementById('change-location');
+        changelocal.addEventListener('click', changeLocation);
 
     })();
 </script>

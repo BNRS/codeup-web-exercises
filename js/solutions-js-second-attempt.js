@@ -39,7 +39,6 @@ function isBoolean(input) {
 
 
 // Define a function named isArray that takes in an input and returns a boolean whether or not that input is an array or not.
-//
 // isArray([])                 // true
 // isArray([1, 2, 3])          // true
 // isArray(['a', 'b'])         // true
