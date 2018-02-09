@@ -103,7 +103,7 @@
 // do {
 //     console.log('while loop iteration #' + i);
 //     i++;
-// } while (i < 10);
+// } while (i <= 100);
 
 
 // For Loop //

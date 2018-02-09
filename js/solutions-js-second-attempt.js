@@ -1,5 +1,9 @@
 // Define a function named isBoolean that takes in a value and returns a boolean if the argument provided is a boolean value or not.
-//
+
+function isBoolean(input) {
+    return typeof input == "boolean";
+}
+
 // isBoolean(true)             // true
 // isBoolean(false)            // true
 // isBoolean(0)                // false
@@ -8,9 +12,6 @@
 // isBoolean("Bob")            // false
 // isBoolean([1, 2])           // false
 
-function isBoolean(input) {
-    return typeof input == "boolean";
-}
 
 
 // Define a function named isNumeric that takes in a value and returns true if the input is numeric or not. Numeric strings are numeric and should return true.
@@ -31,19 +32,30 @@ isNumeric();
 
 
 // Define a function named isString that takes in a value as an input and returns a boolean if the input provided is a string or not. Numeric strings will count as strings and should return true.
-//
-// isString("Hello")           // true
-// isString("Codeup")          // true
-// isString("123")             // true
-// isString(4)                 // false
-// isString(true)              // false
-// isString([1, 2, 3])         // false
-// isString()                  // false
-// isString(null)              // false
 
+function isString(input) {
+    return typeof input === "string";
+}
+
+
+isString("Hello")          // true
+isString("Codeup")         // true
+isString("123")            // true
+isString(4)                // false
+isString(true)             // false
+isString([1, 2, 3])        // false
+isString()                 // false
+isString(null)             // false
 
 
 // Define a function named isArray that takes in an input and returns a boolean whether or not that input is an array or not.
+
+function isArray(input) {
+    return typeof input === [];
+}
+
+
+
 // isArray([])                 // true
 // isArray([1, 2, 3])          // true
 // isArray(['a', 'b'])         // true

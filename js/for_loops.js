@@ -24,6 +24,7 @@
 //         console.log(number + " x " + i + " = " + (number * i));
 //     }
 // }
+// showMultiplicationTable(2);
 
 /**my answer**/
 // var randomNumberUpToTen = Math.floor(Math.random() * 10) + 1;
@@ -43,8 +44,7 @@
 // var num = parseInt(num); //parse the num to number
 // var i = 0;
 //
-// for(i = 1; i <= 10; i++) {
-//
+// for (i = 1; i <= 10; i++) {
 //     console.log("" + num + " x " + i + " = " + num*i + "");
 // }
 

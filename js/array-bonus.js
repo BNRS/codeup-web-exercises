@@ -4,52 +4,50 @@
 
 function average(numbers) {
     var total = 0;
-    numbers.forEach(function (numbers) {
-        total += numbers;
-    });
-return (total/numbers.length)
+    for (var i = 0; i < numbers.length; i++) {
+        total += numbers[i] / numbers.length;
+    }
+    return total;
 }
 
+console.log(average([3, 3, 6]));
 
-
-// function average(input) {
-//     var total = 0;
-//     input.forEach(function(input) {
-//         total += input;
-//     });
-//     return (total/input.length);
-// }
-// console.log('The average of that array is ' + average([3, 45, 56, 78]));
 
 
 // 2. Write a function called sumAll(numbers) that takes in an array of numbers and returns the sum of adding all of them.
 
 function sumAll(numbers) {
     var total = 0;
-    numbers.forEach(function (numbers) {
-        total += numbers;
-    });
-    return (total + numbers.length);
+    for (var i = 0; i < numbers.length; i++) {
+        total += numbers[i];
+    }
+    return total;
 }
+console.log(sumAll([2, 2, 2, 20]));
+
 
 // 3. Write a function called max(numbers) that takes in an array of numbers and returns the largest
 
 function max(numbers) {
-    return Math.max(numbers);
+    return Math.max.apply(null, numbers);
 }
+console.log(max([1, 3, 2, 6]));
+
+
 
 // 4. Write a function called min(numbers) that takes in an array of numbers and returns the smallest
 
-Array.max = function( array ){
-    return Math.max.apply( Math, array );
-};
 
-Array.min = function( array ){
-    return Math.min.apply( Math, array );
-};
+
+function min(numbers) {
+    return Math.min.apply(null, numbers);
+}
+console.log(min([1, 4, 5, 7, .98]));
+
 
 
 // 5. Write a function called reverseArray(array) that takes in an array and returns the elements in reverse order
+
 
 function reverseArray(array){
     return array.reverse();
@@ -64,9 +62,7 @@ function randomElement(array) {
     return array[Math.floor(Math.random()*array.length)];
 }
 
-
-
-
+console.log(randomElement([2, 3, 5, 7, 8, 9, 10]));
 
 // 7. Write a function called upperCaseAll(array) that takes in an array of strings and returns an array of uppercased strings.
 function upperCaseAll(array){
@@ -91,34 +87,29 @@ function getOdds(array){
 console.log(getOdds([1,2,3,4,5,6,7,8,9,10]));
 
 // 9. Write a function called getEvens(array) that returns only the even numbers from an array of numbers
-function getEvens(array){
+
+function getEvens(array) {
     var evenArray = [];
-    for (var i = 0;i<array.length;i++){
-        if (array[i]%2===0){
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] % 2 === 0) {
             evenArray.push(array[i]);
         }
-    }
-    return evenArray;
+    } return evenArray
 }
-console.log(getEvens([1,2,3,4,5,6,7,8,9,10]));
+
+console.log(getEvens([1, 2, 3, 4, 800]));
 
 // 10. Write a function called multiplyAll(array) that takes in an array of numbers and returns the result of multiplying all the numbers
 
-function multiplyAll(array){
+function multiplyAll(array) {
     var total = 1;
-    for (var i = 0;i<array.length;i++){
-        total *= array[i]
+    for (var i = 0; i < array.length; i++) {
+        total *= array[i];
     }
     return total;
 }
-console.log(multiplyAll([2,3,4,5]));
 
-
-
-
-
-
-
+console.log(multiplyAll([2, 2, 2, 50]));
 
 
 // ================================= ARRAY MANIPULATION
@@ -269,6 +260,9 @@ console.log(multiplyAll([2,3,4,5]));
 //         return firstAttacker;
 //     }
 // }
+
+
+
 
 
 
