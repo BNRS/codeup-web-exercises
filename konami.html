@@ -1,33 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+
     <title>Konami Code</title>
+    <style>
+
+        * {
+            background-color: #1b6d85;
+            box-sizing: border-box;
+        }
+
+        title   {
+            margin: 0;
+            padding: 0;
+        }
+
+    </style>
 </head>
 <body>
-<h1>Konami Code</h1>
+
+<h1 style="text-align: center; margin: 0; padding: 40px; font-size: 50px">Konami Code</h1>
+
+<div class="buttons" style="font-size:13em; color:cyan; text-align:center; border:solid #518be8 10px; border-radius: 5px">
+    <i class="fas fa-arrow-alt-circle-up" id="up1"></i>
+    <i class="fas fa-arrow-alt-circle-up" id="up2"></i>
+    <i class="fas fa-arrow-alt-circle-down" id="down1"></i>
+    <i class="fas fa-arrow-alt-circle-down" id="down2"></i>
+    <i class="fas fa-arrow-alt-circle-left" id="left1"></i>
+    <i class="fas fa-arrow-alt-circle-right" id="right1"></i>
+    <i class="fas fa-arrow-alt-circle-left" id="left2"></i>
+    <i class="fas fa-arrow-alt-circle-right" id="right2"></i>
+    <i class="fas fa-bold" id="b"></i>
+    <i class="fas fa-font" id="a"></i>
+    <i class="fas fa-keyboard" id="enterKey"></i>
+</div>
+
 <!--<script src="/js/jquery.js"></script>-->
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
         crossorigin="anonymous"></script>
+
 <script>
+
     "use strict";
 
-        var keyInput = [];
+    var code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+    var i = 0;
 
-        $(document).keyup(function(e){
-            var key = e.which || e.keyCode;
-
-            keyInput.push(key);
-            console.log(keyInput);
-
-            var newKeyInput = keyInput.toString();
-            var konamiCode = "38,38,40,40,37,39,37,39,66,65,13";
-
-            if (newKeyInput === konamiCode){
-                alert("You have added 30 extra lives!!");
-            }
-        });
+    $(document).keyup(function(event){
+        var pressedKey = event.keyCode;
+        if (i === 10 && pressedKey === 13)
+            alert("30 bonus lives");
+        if (code[i] === pressedKey) {
+            var k = $(".fas").get([i]);
+            $(k).css('color', '#a568d6');
+            i++;
+        } else {
+            i = 0;
+            $('.fas').css('color', 'cyan');
+        }
+    });
 
 </script>
 </body>
 </html>
+
