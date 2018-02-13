@@ -30,12 +30,6 @@
         </div>
     </main>
 
-
-
-
-
-
-
 <!--jQuery from local-->
 <!--<script src="js/jquery-2.2.4.js"></script>-->
 <!--jQuery CDN-->
@@ -46,15 +40,47 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
+    <!-- Custom JS -->
 <script>
 
         $(document).ready(function() {
 
-            $("h1, p, li").css("color", "cyan");
+
+
+
+
+            $('h1').click(function(e) {
+                    $(e.target).css('color', '#8b2c9c')
+                });
+
+            $('p').dblclick(function(e) {
+                $(e.target).css("font-size", "25px");
+            });
+
+
+            $('li').hover(function(e) {
+                    $(e.target).css('color', 'magenta');
+                },
+                function(e) {
+                    $(e.target).css('color', 'cyan');
+                }
+            );
+
+            $('li').hover(
+                function() {
+                    $(this).fadeOut('100');
+                },
+                function() {
+                    $(this).fadeIn('500');
+                }
+            );
+
+
+
+
+
 
         });
-
-
 </script>
 </body>
 </html>

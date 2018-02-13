@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+<!--<script src="/js/jquery.js"></script>-->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+<script>
+    "use strict";
+
+        var keyInput = [];
+
+        $(document).keyup(function(e){
+            var key = e.which || e.keyCode;
+
+            keyInput.push(key);
+            console.log(keyInput);
+
+            var newKeyInput = keyInput.toString();
+            var konamiCode = "38,38,40,40,37,39,37,39,66,65,13";
+
+            if (newKeyInput === konamiCode){
+                alert("You have added 30 extra lives!!");
+            }
+        });
+
+</script>
+</body>
+</html>
