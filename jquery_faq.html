@@ -17,12 +17,40 @@
             font-weight: bold;
         }
 
+        #x {
+            position: relative;
+            left: 650px;
+        }
+
+        #national-parks, #state-parks-texas, #code-languages {
+            display: none;
+        }
+
+        .button-li {
+            position: relative;
+            left: 22px;
+        }
+        
+        #register {
+            display: none;
+        }
+
+
     </style>
 </head>
 <body>
 
+<div class="alert alert-warning alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <strong>Thanks for checkout out our site!</strong> We're glad you stopped by!
+</div>
+
+<div>
+    <h1 id="news-letter">Would you like to sign up for our newsletter?<span id="x">x</span></h1>
+</div>
+
 <div class="div-top">
-    <h3>National Parks</h3>
+    <h3 id="national-parks-toggle">National Parks</h3>
         <ul id="national-parks">
             <li>Arches</li>
             <li>Badlands</li>
@@ -30,15 +58,15 @@
             <li>Denali</li>
             <li>Everglades</li>
         </ul>
-    <h3>State Parks of Texas</h3>
+    <h3 id="state-parks-texas-toggle">State Parks of Texas</h3>
         <ul id="state-parks-texas">
             <li>Abilene</li>
             <li>Big Bend</li>
             <li>Choke Canyon</li>
             <li>Davis Mountains</li>
-            <li id="enchant">Enchanted Rock</li>
+            <li>Enchanted Rock</li>
         </ul>
-    <h3>Code Languages</h3>
+    <h3 id="code-languages-toggle">Code Languages</h3>
         <ul id="code-languages">
             <li>Linux</li>
             <li>Apache</li>
@@ -48,7 +76,14 @@
         </ul>
 </div>
 
+<br>
+
 <button class="button-li">Click Me</button>
+
+<br>
+
+<h2 id="register">Would you like to register for our site?</h2>
+
 
 
 
@@ -76,21 +111,47 @@
 
 
         // Create a button that, when clicked, makes the last li in each ul have a yellow background.
-        $('.button-li').click(function (index) {
-            $('ul').each(function(index) {
-                $(this).children().last().toggleClass('highlight');
-            });
+        // $('.button-li').click(function (index) {
+        //     $('ul').each(function(index) {
+        //         $(this).children().last().toggleClass('highlight');
+        //     });
+        // });
+
+        // // When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
+        // $('h3').click(function (index) {
+        //     $(this).next().children().toggleClass('boldIt');
+        // });
+
+        // // When any list item is clicked, first li of the parent ul should have a font color of blue.
+        // $('li').click(function (index) {
+        //     $(this).parent().children().first().css('color', 'blue');
+        // });
+
+        // At the top of the page, add a div with two elements, an h1 that reads "Would you like to sign up for our "
+        // "newsletter?" and a span that has an 'x' in it. When the 'x' is clicked, hide the entire div element.
+
+        $('#x').click(function() {
+            $('#news-letter').slideUp(1000);
         });
 
-        // When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
-        $('h3').click(function (index) {
-            $(this).next().children().toggleClass('boldIt');
+        // The uls next to each h3 that contain facts about each park should start out hidden, and when the corresponding
+        // h3 is clicked, the display of the ul should be toggled with a sliding effect.
+
+        $('#national-parks-toggle').click(function() {
+            $('#national-parks').slideToggle();
+        });
+        $('#state-parks-texas-toggle').click(function() {
+            $('#state-parks-texas').slideToggle();
+        });
+        $('#code-languages-toggle').click(function() {
+            $('#code-languages').fadeToggle();
         });
 
-        // When any list item is clicked, first li of the parent ul should have a font color of blue.
-        $('li').click(function (index) {
-            $(this).parent().children().first().css('color', 'blue');
-        });
+        // After the user has been on the page for 8 seconds, an h2 should
+        // fade in that asks the user to register for the site.
+
+        $('#register').fadeIn(10000);
+        
 
     });
 
