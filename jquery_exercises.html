@@ -1,78 +1,131 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <title>jQuery</title>
+    <title>jQuery Attributes and CSS Exercise</title>
+    <style type="text/css">
+
+        .invisible {
+            display: none;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+
+        dt {
+            text-decoration: underline;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: 900;
+            display: block;
+        }
+
+    </style>
 </head>
 <body>
 
-    <main id="main-container-id" class="main-container-class">
-        <div id="main-div-id" class="main-div-class">
-            <h1 id="main-h1-id" class="top-class">
-                jQuery Implementation
-            </h1>
+<h1>Top Ten Questions about Glacier National Park</h1>
 
-            <p id="main-paragraph-id" class="top-class">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Beatae ducimus excepturi ipsam nostrum optio quia,
-                reprehenderit repudiandae saepe? Adipisci consequuntur ducimus enim exercitationem,
-                laboriosam minima quas quibusdam ratione voluptas voluptate!</p>
+<dl>
+    <dt>Where is Glacier National Park located?</dt>
+    <dd class="invisible">Glacier National Park is located in northwestern Montana on the U.S./Canadian border. Access to the park from the east and west is along U.S. Highway 2. Park headquarters is located in West Glacier.</dd>
+    <dt>When is the park open?</dt>
+    <dd class="invisible">Glacier National Park is open year-round, 24 hours a day. In the fall winter and spring, some roads are inaccessible by car due to snow.</dd>
+    <dt>What does it cost to enter the park?</dt>
+    <dd class="invisible">Glacier National Park is open year-round, 24 hours a day. In the fall winter and spring, some roads are inaccessible by car due to snow.</dd>
+    <dt>Where are the closest airports to the park? Is there transportation from the airports to the park?</dt>
+    <dd class="invisible">Glacier Park International Airport in Kalispell, Montana is 25 miles west of park headquarters in West Glacier, Montana.
 
-            <ul id="main-list-id" class="top-class">
-                <li>First Item</li>
-                <li>Second Item</li>
-                <li>Third Item</li>
-                <li>Fourth Item</li>
-            </ul>
-        </div>
-    </main>
+        There are also airports in Great Falls, Montana (200 miles east of West Glacier)and Missoula, Montana (156 miles south of West Glacier).
 
-<!--jQuery from local-->
-<!--<script src="js/jquery-2.2.4.js"></script>-->
-<!--jQuery CDN-->
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"
-        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-        crossorigin="anonymous"></script>
-<!-- Bootstrap Core Javascript CDN -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
-    <!-- Custom JS -->
+        Car rentals are available at airports. Shuttles are available at the Kalispell airport.</dd>
+    <dt>What is the closest train station to the park?</dt>
+    <dd class="invisible">Amtrak rail lines parallel the southern and southwestern borders of the park. Amtrak stops at West Glacier (Belton), East Glacier (summer only), and Essex (upon request).</dd>
+    <dt>What transportation is available within the park?</dt>
+    <dd class="invisible">In addition to private automobiles, guided tours are available in the main sections of the park. Contact Glacier Park, Inc. and Sun Tours for information (see addresses and telephone numbers below). Rental cars are available in neighboring communities.
+
+        Glacier Park, Inc.
+        1850 North Central Avenue
+        Phoenix, Arizona 85077-0928
+        (602)207-6000
+
+        Sun Tours
+        29 Glacier Avenue
+        East Glacier Park, Montana 59434
+        (800)786-9220
+
+    </dd>
+    <dt>Where are the visitor centers located in the park?</dt>
+    <dd class="invisible">Visitor centers are located in Apgar, Logan Pass, and St. Mary. Each of these visitor centers, as well as the Many Glacier and Two Medicine Ranger Stations, have park rangers on duty throughout the summer months to answer questions and provide information. During the winter months, Apgar Visitor Center is open on week-ends.
+
+    </dd>
+    <dt>Do you have campgrounds in the park? Can I make a reservation?</dt>
+    <dd class="invisible">Glacier National Park has 13 campgrounds, which provide just over 1000 campsites. Most of the campgrounds are operated on a "first come, first serve" basis. Fish Creek and St. Mary Campgrounds will be available for reservation by calling 1-800-365-2267. Click here for more detailed information on camping.
+
+        Winter primitive camping is available in the Apgar Picnic Area and in the St. Mary Campground.</dd>
+    <dt>Is it possible to reserve a backcountry campsite?</dt>
+    <dd class="invisible">Reservations for backcountry campsites may be made in advance, beginning April 1 for the upcoming summer. For further information on backcountry camping and for making reservations, visit our website section on Backcountry Camping.</dd>
+    <dt>Can I drive my RV along the Going-to-the-Sun Road?</dt>
+    <dd class="invisible">Vehicles, and vehicle combinations, longer than 21 feet (including bumpers) or wider than 8 feet (including mirrors) are prohibited between Avalanche Campground and the Sun Point parking area. You may however, drive to Avalanche if traveling east, and to Sun Point, if traveling west. Vehicles over 10 feet in height may have difficulty driving west from Logan Pass due to rock overhangs. Stock trucks and trailers may access Packers Roost and Siyeh Bend.</dd>
+</dl>
+
+<h3 id="national-parks-heading">National Parks</h3>
+<ul id="national-parks">
+    <li>Arches</li>
+    <li>Badlands</li>
+    <li>Carlsbad Caverns</li>
+    <li>Denali</li>
+    <li>Everglades</li>
+</ul>
+<h3>State Parks of Texas</h3>
+<ul id="state-parks-texas">
+    <li>Abilene</li>
+    <li>Big Bend</li>
+    <li>Choke Canyon</li>
+    <li>Davis Mountains</li>
+    <li>Enchanted Rock</li>
+</ul>
+<h3>Amusement Parks</h3>
+<ul id="amusement-parks">
+    <li>Disney World</li>
+    <li>6 Flags Over Texas</li>
+    <li>Sea World</li>
+    <li>Universal Studios</li>
+</ul>
+
+
+<button id="li1">Make the last li in each ul have a yellow background</button>
+<button id="li2">Another way to make the last li in each ul have a yellow background</button>
+
+<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script>
 
-        $(document).ready(function() {
-
-            $('h1').click(function(e) {
-                    $(e.target).css('color', '#8b2c9c')
-                });
-
-            $('p').dblclick(function(e) {
-                $(e.target).css("font-size", "25px");
-            });
-
-
-            $('li').hover(function(e) {
-                    $(e.target).css('color', 'magenta');
-                },
-                function(e) {
-                    $(e.target).css('color', 'cyan');
-                }
-            );
-
-            $('li').hover(
-                function() {
-                    $(this).fadeOut('100');
-                },
-                function() {
-                    $(this).fadeIn('500');
-                }
-            );
-
+    $("#li1").click(function() {
+        $("ul").each(function(index, element) {
+            $(element).children().last().toggleClass('highlight');
         });
+    });
+
+    $("#li2").click(function() {
+        $("ul").each(function(index, element) {
+            $(this).children().last().toggleClass('highlight');
+        });
+    });
+
+    //When any h3 is clicked,
+    // the lis underneath it should be bolded. Use font-weight: bold to achieve this.
+    $("h3").click(function() {
+        $(this).next().children().css('font-weight', 'bold');
+    });
+
+    // When any list item is clicked, first li of the parent ul should have a font color of blue.
+    $("li").click(function() {
+        $(this).parent().children().first().css('color', 'blue');
+    });
+
+
 
 </script>
+
 </body>
 </html>

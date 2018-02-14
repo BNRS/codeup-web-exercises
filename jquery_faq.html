@@ -9,47 +9,54 @@
     <title>jQuery FAQ</title>
     <style>
 
-        /*.invisible {*/
-            /*display: none;*/
-        /*}*/
+        .highlight {
+            background-color: lightcoral;
+        }
+
+        .boldIt {
+            font-weight: bold;
+        }
 
     </style>
 </head>
 <body>
 
-    <div>
-        <dl>
-            <dt>Park 1</dt>
-            <dd class="invisible">Park 1 is amazing</dd>
-            <dt>Park 2</dt>
-            <dd class="invisible">White cold drink</dd>
-            <dt>Park 3</dt>
-            <dd class="invisible">Black hot drink</dd>
-            <dt>Park 4</dt>
-            <dd class="invisible">White cold drink</dd>
-            <dt>Park 5</dt>
-            <dd class="invisible">Black hot drink</dd>
-            <dt>Park 6</dt>
-            <dd class="invisible">White cold drink</dd>
-            <dt>Park 7</dt>
-            <dd class="invisible">Black hot drink</dd>
-            <dt>Park 8</dt>
-            <dd class="invisible">White cold drink</dd>
-            <dt>Park 9</dt>
-            <dd class="invisible">Black hot drink</dd>
-            <dt>Park 10</dt>
-            <dd class="invisible">White cold drink</dd>
-        </dl>
-    </div>
+<div class="div-top">
+    <h3>National Parks</h3>
+        <ul id="national-parks">
+            <li>Arches</li>
+            <li>Badlands</li>
+            <li>Carlsbad Caverns</li>
+            <li>Denali</li>
+            <li>Everglades</li>
+        </ul>
+    <h3>State Parks of Texas</h3>
+        <ul id="state-parks-texas">
+            <li>Abilene</li>
+            <li>Big Bend</li>
+            <li>Choke Canyon</li>
+            <li>Davis Mountains</li>
+            <li id="enchant">Enchanted Rock</li>
+        </ul>
+    <h3>Code Languages</h3>
+        <ul id="code-languages">
+            <li>Linux</li>
+            <li>Apache</li>
+            <li>MySQL</li>
+            <li>PHP</li>
+            <li>Javascript</li>
+        </ul>
+</div>
 
-    <button class="toggle-button">Toggle Answers</button>
+<button class="button-li">Click Me</button>
+
 
 
 
 
 
 <!--jQuery from local-->
-<script src="js/jquery-2.2.4.js"></script>
+<!--<script src="js/jquery-2.2.4.js"></script>-->
 
 <!--jQuery CDN-->
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
@@ -68,15 +75,22 @@
     $(document).ready(function() {
 
 
-        $("button").click(function () {
-            $("dd").toggleClass("invisible");
+        // Create a button that, when clicked, makes the last li in each ul have a yellow background.
+        $('.button-li').click(function (index) {
+            $('ul').each(function(index) {
+                $(this).children().last().toggleClass('highlight');
+            });
         });
 
-
-        $("dt").click(function () {
-            $(this).css("background", "salmon");
+        // When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
+        $('h3').click(function (index) {
+            $(this).next().children().toggleClass('boldIt');
         });
 
+        // When any list item is clicked, first li of the parent ul should have a font color of blue.
+        $('li').click(function (index) {
+            $(this).parent().children().first().css('color', 'blue');
+        });
     });
 
 </script>
