@@ -35,6 +35,9 @@
             display: none;
         }
 
+        .alert {
+            display: none;
+        }
 
     </style>
 </head>
@@ -46,7 +49,7 @@
 </div>
 
 <div>
-    <h1 id="news-letter">Would you like to sign up for our newsletter?<span id="x">x</span></h1>
+    <h1 id="news-letter">Would you like to sign up for our newsletter?<span id="x">X</span></h1>
 </div>
 
 <div class="div-top">
@@ -131,26 +134,32 @@
         // "newsletter?" and a span that has an 'x' in it. When the 'x' is clicked, hide the entire div element.
 
         $('#x').click(function() {
-            $('#news-letter').slideUp(1000);
+            $(this).parent().parent().hide();
         });
 
         // The uls next to each h3 that contain facts about each park should start out hidden, and when the corresponding
         // h3 is clicked, the display of the ul should be toggled with a sliding effect.
 
-        $('#national-parks-toggle').click(function() {
-            $('#national-parks').slideToggle();
+        $('h3').click(function () {
+            $(this).next().slideToggle();
         });
-        $('#state-parks-texas-toggle').click(function() {
-            $('#state-parks-texas').slideToggle();
-        });
-        $('#code-languages-toggle').click(function() {
-            $('#code-languages').fadeToggle();
-        });
+
+        // $('#national-parks-toggle').click(function() {
+        //     $('#national-parks').slideToggle();
+        // });
+        // $('#state-parks-texas-toggle').click(function() {
+        //     $('#state-parks-texas').slideToggle();
+        // });
+        // $('#code-languages-toggle').click(function() {
+        //     $('#code-languages').fadeToggle();
+        // });
 
         // After the user has been on the page for 8 seconds, an h2 should
         // fade in that asks the user to register for the site.
 
-        $('#register').fadeIn(10000);
+        $('#register').delay(3500).fadeIn();
+
+        $('.alert').delay(3500).fadeIn();
         
 
     });
