@@ -111,21 +111,21 @@
 
 
         // Create a button that, when clicked, makes the last li in each ul have a yellow background.
-        // $('.button-li').click(function (index) {
-        //     $('ul').each(function(index) {
-        //         $(this).children().last().toggleClass('highlight');
-        //     });
-        // });
+        $('.button-li').click(function (index) {
+            $('ul').each(function(index) {
+                $(this).children().last().toggleClass('highlight');
+            });
+        });
 
         // // When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
-        // $('h3').click(function (index) {
-        //     $(this).next().children().toggleClass('boldIt');
-        // });
+        $('h3').click(function (index) {
+            $(this).next().children().toggleClass('boldIt');
+        });
 
         // // When any list item is clicked, first li of the parent ul should have a font color of blue.
-        // $('li').click(function (index) {
-        //     $(this).parent().children().first().css('color', 'blue');
-        // });
+        $('li').click(function (index) {
+            $(this).parent().children().first().css('color', 'blue');
+        });
 
         // At the top of the page, add a div with two elements, an h1 that reads "Would you like to sign up for our "
         // "newsletter?" and a span that has an 'x' in it. When the 'x' is clicked, hide the entire div element.
