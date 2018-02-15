@@ -28,25 +28,29 @@
         "use strict";
         // TODO: Create an ajax GET request for /data/inventory.json
 
-        var request = $.get("data/inventory.json");
+        function makeRequestAndUpdatePage() {
 
-        request.fail(function(jqXhr, status, error) {
-            console.log("There was an error! Check the console for details");
-            console.log("Response status: " + status);
-            console.log("Error object: " + error);
-        });
+            var request = $.get("data/inventory.json");
 
-        request.done(function(data) {
-            console.log(data);
+            request.done(function (data) {
+                buildHTML(data);
+                console.log(data);
 
-            data.forEach(function(tool) {
-                addRowToTable(tool);
             });
-        });
 
-        function addRowToTable(tool) {
+            request.fail(function (jqXhr, status, error) {
+                console.log("There was an error! Check the console for details");
+                console.log("Response status: " + status);
+                console.log("Error object: " + error);
+            });
 
+        }
+
+        function buildHTML(tool) {
             var htmlString = "";
+
+            tool.forEach(function (tool) {
+
             htmlString += "<tr>";
             htmlString += "<td>" + tool.title + "</td>";
             htmlString += "<td>" + tool.quantity + "</td>";
@@ -54,15 +58,13 @@
             htmlString += "<td>" + tool.categories + "</td>";
             htmlString += "</tr>";
 
-            $("#insertProducts").append(htmlString);
+        });
+
+            $("#insertProducts").html(htmlString);
+
         }
 
-        $('#updateInfo').click(function () {
-            addRowToTable;
-        })
-
-
-
+        $('#updateInfo').click(makeRequestAndUpdatePage);    // button not working correctly //
 
     })();
 </script>

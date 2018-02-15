@@ -39,8 +39,7 @@
 </div>
 <button id="update">Update w/Ajax</button>
 
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"
-        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 <script>
 
@@ -48,43 +47,40 @@
 
         "use strict";
 
-        // make the request and call the buildHTML function
-        function updatePage() {
-        }
+        function makeRequestAndUpdatePage() {
 
-        // build HTML based on orders from request
-        function updateTable() {
-            var ajaxRequest = $.ajax('data/order.json');
-            ajaxRequest.done(function (data) {
+            var ajaxRequest = $.ajax("data/orders.json");
+
+            ajaxRequest.done(function(data) {
                 buildHTML(data);
             });
-            ajaxRequest.fail(function (job, status) {
-                console.log(status);
-            })
+
+            ajaxRequest.fail(function(jqXhr, status) {
+                console.log(status + " request failed");
+            });
+
         }
-        updateTable();
-        function buildHTML(inventory) {
-            var html = '';
-            html += '<tbody>';
-            inventory.forEach(function(inventory) {
-                html += '<th>' + inventory.orderNumber + '</th>';
-                html += '<th>' + inventory.itemOrdered + '</th>';
-                html += '<th>' + inventory.orderedBy + '</th>';
+
+        function buildHTML(orders) {
+            var ordersHTML = "";
+
+            orders.forEach(function(order) {
+
+                ordersHTML += "<section>";
+                ordersHTML += "<h3>Order #" + order.orderNumber + "</h3>";
+                ordersHTML += "<dl>";
+                ordersHTML += "<dt>Item Ordered</dt>";
+                ordersHTML += "<dd>" + order.itemOrdered + "</dd>";
+                ordersHTML += "<dt>Ordered By</dt>";
+                ordersHTML += "<dd>" + order.orderedBy + "</dd>";
+                ordersHTML += "</section>";
 
             });
-            html += '</tbody>';
-            $('#insertProducts').html(html);
+
+            $('#orders').html(ordersHTML);
         }
-        // HINT: Your data should come back as a JSON object; use console.log() to inspect
-        //       its contents and fields
-        // HINT: You will want to target #insertProducts for your new HTML elements
 
-        // add button
-        // $('buttonName').click (updateTable);
-    })();
-
-
-        // add click event
+        $('#update').click(makeRequestAndUpdatePage);
 
     });
 
