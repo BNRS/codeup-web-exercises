@@ -13,16 +13,16 @@
         "quantity": 5,
         "categories": [
             "tool",
-            "powered"
+            " powered"
         ],
         "price": 100
     }, {
         "title": "Mower",
         "quantity": 5,
         "categories": [
-            "tool",
-            "gas",
-            "outdoor"
+            " tool",
+            " gas",
+            " outdoor"
         ],
         "price": 200
     }, {
