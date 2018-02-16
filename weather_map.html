@@ -5,19 +5,44 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Weather Map Project</title>
     <style>
 
+        * {
+             padding: 0;
+             margin: 0;
+             box-sizing: border-box;
+         }
 
     </style>
 </head>
 <body>
 
+<h1>Weather Forecast Application</h1>
 
+<main class="container">
+    <div class="row">
+        <div class="san-antonio-forecast">
 
+            <h1>Forecast</h1>
 
+            <div class="div-1-city-name"></div>
+            <div class="div-2-clouds"></div>
+            <div class="div-3-humidity"></div>
+            <div class="div-4-weather"></div>
+            <div class="div-5-weather"></div>
 
+        </div>
 
+        <div id="insert-weather-html"></div>
+    </div>
+
+    <div>
+        <button id="update-page-button">Click For Up To Date Weather Information</button>
+    </div>
+
+</main>
 
 
 
@@ -46,10 +71,62 @@
 <!--Custom JS -->
 
 <script>
-    var request = $.get("http://api.openweathermap.org/data/2.5/weather", {
-        APPID: "467fce2fbe4d967cacd8c8886374905a",
-        q:     "San Antonio, TX"
-    });
+(function() {
+"use strict";
+
+    // Using HTML, CSS, jQuery, ajax, and the OpenWeatherMap API,
+    // start by showing the current conditions for San Antonio on your page.
+        function makeRequestAndUpdatePage () {
+
+            var request = $.get("http://api.openweathermap.org/data/2.5/weather", {
+                APPID: "44799099579bbbf0575db626ea70e189",
+                q: "San Antonio"
+            });
+
+            request.done(function (data) {
+                buildWeatherHTML(data);
+                console.log(data);
+                // $(".div-1-city-name").html("Weather forecast in " + data.name);
+                // $(".div-2-clouds").html("Cloud data: " + data.clouds.all);
+                // $(".div-3-humidity").html("Current humidity: " + data.main.humidity);
+                // $(".div-4-weather").html("The current weather condition is: " + data.weather[0].main);
+                // $(".div-5-weather").html("The current wind speed: " + data.wind.speed);
+            });
+
+            request.fail(function (jqXhr, status, error) {
+            console.log("There was an error! Check the console for details");
+            console.log("Response status: " + status);
+            console.log("Error object: " + error);
+
+            });
+
+        }
+
+        function buildWeatherHTML(weather) {
+            var htmlWeather = "";
+
+            for (var i = 1; i <= 1; i += 1) {
+                htmlWeather += "<div>";
+                htmlWeather += "<h3 style='text-align: center'>" + "City: " + weather.name + "</h3>";
+                htmlWeather += "<br>";
+                htmlWeather += "<h4>" + "Cloud Information: " + weather.clouds.all + "</h4>";
+                htmlWeather += "<h4>" + "Humidity: " + weather.main.humidity + "</h4>";
+                htmlWeather += "<h4>" + "Visibility: " + weather.weather[0].main + "</h4>";
+                htmlWeather += "<h4>" + "Wind speed: " + weather.wind.speed + "</h4>";
+
+            }
+
+            $("#insert-weather-html").html(htmlWeather);
+
+        }
+
+        $("#update-page-button").click(makeRequestAndUpdatePage);
+
+})();
+
+
+    // Update your layout and ajax request(s) to display a three day forecast for
+    // San Antonio that looks like the screenshot below.
 
 </script>
 </body>
