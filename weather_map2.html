@@ -171,9 +171,9 @@
                         + '<p class="highLow">' + Math.round(forecasts[i].high) + "° " + '<span>' + Math.round(forecasts[i].low) + "° F" + '</span>' + '</p>'
                         + '<img src="http://openweathermap.org/img/w/' + forecasts[i].imageIcon + '.png">'
                         + '<p class="windSpeed">' + "Wind: " + Math.round(forecasts[i].windSpeed) + " mph" + '</p>' + '</div>';
-//                        + '<p class="typeCondition">' + forecasts[i].typeCondition + '</p>'
-//                        + '<p class="condition">' + "Expected: " + forecasts[i].condition + '</p>'
-//                        + '<p class="humidity">' + "Humidity: " + forecasts[i].humidity + "%" + '</p>'
+                        // + '<p class="typeCondition">' + forecasts[i].typeCondition + '</p>';
+                        // + '<p class="condition">' + "Expected: " + forecasts[i].condition + '</p>';
+                        // + '<p class="humidity">' + "Humidity: " + forecasts[i].humidity + "%" + '</p>';
 
 
                     $('#forecasts').append(generateForecastStructure); //insert the content at the end of the element with id "forecasts".

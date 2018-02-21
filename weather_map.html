@@ -33,22 +33,22 @@
             margin: 20px;
         }
 
-        /*input {*/
-            /*font-size: 1.2em;*/
-            /*width: 80%;*/
-            /*height: 2em;*/
-        /*}*/
+        input {
+            font-size: 1.2em;
+            width: 80%;
+            height: 2em;
+        }
 
-        /*section {*/
-            /*padding: 0.5em;*/
-        /*}*/
+        section {
+            padding: 0.5em;
+        }
 
-        /*button {*/
-            /*height: 3em;*/
-            /*width: 5.5em;*/
-            /*margin-top: .5em;*/
-            /*margin-bottom: .5em;*/
-        /*}*/
+        .button-map {
+            height: 3em;
+            width: 5.5em;
+            margin-top: .5em;
+            margin-bottom: .5em;
+        }
 
 
     </style>
@@ -69,17 +69,17 @@
 
         <h1>Options</h1>
 
-        <button data-zoom=5 class="zoom">Zoom x 5</button>
-        <button data-zoom=10 class="zoom">Zoom x 10</button>
-        <button data-zoom=15 class="zoom">Zoom x 15</button>
-        <button data-zoom=18 class="zoom">Zoom x 18</button>
-        <button data-zoom=20 class="zoom">Zoom x 20</button>
+        <button data-zoom=5 class="zoom button-map">Zoom x 5</button>
+        <button data-zoom=10 class="zoom button-map">Zoom x 10</button>
+        <button data-zoom=15 class="zoom button-map">Zoom x 15</button>
+        <button data-zoom=18 class="zoom button-map">Zoom x 18</button>
+        <button data-zoom=20 class="zoom button-map">Zoom x 20</button>
 
         <div>
             <input type="text" id="address" name="address" value="124 Broadway, San Antonio, TX 78205" placeholder="Please input the address of a location to map!">
         </div>
 
-        <button id="get-address-button">Map it!</button>
+        <button class="button-map" id="get-address-button">Map it!</button>
 
     </section>
 
