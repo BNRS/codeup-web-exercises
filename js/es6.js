@@ -104,15 +104,15 @@ $(".list").html(list);
 // }
 //
 //
-// function remove9s(array) {
-//     let a = array.filter(el => {
-//         return el !== 9;
-//     });
-//     return a;
-// }
-//
-//
-//
+function remove9s(array) {
+    let a = array.filter(el => {
+        return el !== 9;
+    });
+    return a;
+}
+
+
+
 // function capitalizeName(string) {
 //     var array = string.split(" ");
 //     array = array.map(function(el) {
