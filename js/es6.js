@@ -75,21 +75,53 @@ users.forEach(({ name, email, languages }) => {
   developers.push(`${name}'s email is: ${email} and knows ${languages.join(', ')}. `);
 });
 
-// console.log(developers);
+console.log(developers);
 
 // TODO: Use `let` for the following variable
 let list = '<ul>';
 
 // TODO: rewrite the following loop to use a for..of loop
 
-    for (let developer of developers) {
+    for (let dev of developers) {
 
 // TODO: rewrite the assignment below to use template strings
-    list += `<li> ${developer} </li>`;
+    list += `<li> ${dev} </li>`;
 
   }
 
 list += '</ul>';
 
 $(".list").html(list);
+
+
+
+
+
+// function remove9s(numbers) {
+//     return numbers.filter(function(number) {
+//         return number != 9;
+//     });
+// }
+//
+//
+// function remove9s(array) {
+//     let a = array.filter(el => {
+//         return el !== 9;
+//     });
+//     return a;
+// }
+//
+//
+//
+// function capitalizeName(string) {
+//     var array = string.split(" ");
+//     array = array.map(function(el) {
+//         return el[0].toUpperCase() + el.substring(1, el.length);
+//     });
+//     return array.join(" ");
+// }
+//
+// function capitalizeAllNames(array){
+//     return array.map(capitalizeName);
+// }
 
